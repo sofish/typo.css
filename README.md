@@ -13,7 +13,7 @@ Alpha 中，各路牛人都来支持一下，加入开发啊！预览：[typo.cs
         <tr>
             <th>OS/浏览器</th>
             <th>Firefox</th>
-            <th>Chomre</th>
+            <th>Chrome</th>
             <th>Safari</th>
             <th>Opera</th>
             <th>IE9</th>
