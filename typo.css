@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/* 
+	@名称: base
+	@功能: 重设浏览器默认样式
+*/
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+	color:#333;
+	background:#fff;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,group,menu,nav,section {
+	margin:0;padding:0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,group,menu,nav,section { 
+    display:block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea{
+	font:100%/1.5 serif;
+}
+input,select,textarea{
+	font-size:1em;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+table th, table td{
+    border:1px solid #ddd;padding:5px 10px;
+}
+table th{
+    background:#fbfbfb;
+}
+table thead th{
+    background:#f1f1f1;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th{
+	text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img{
+	border:0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+	display:block;
+}
+
+/* 块/段落引用 */
+blockquote{
+    margin:1em 4em 1em 2em;padding:0.6em 1em;background:#f1f1f1;
+}
+blockquote blockquote{padding:0 0 0 1em;margin-left:2em;border-left:0.4em solid #ddd;}
+
+/* firefox 以外，元素没有下划线，需添加 */
+acronym, abbr{
+	border-bottom:1px dotted;font-variant:normal;
+}
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+abbr{
+    cursor:help;
+}
+
+
+/* 一致的 del 样式 */
+del {
+	text-decoration:line-through;
+}
+
+address,caption,cite,code,den,em,th,var {
+	font-style:normal;
+	font-weight:500;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+ul, ol{
+	list-style:none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {
+	text-align:left;
+}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+h1,h2,h3,h4,h5,h6 {
+    font:100%/1 Arial,sans-serif;
+}
+
+q:before,q:after {
+	content:'';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size:75%;line-height:0;position:relative;vertical-align:baseline;
+}
+sup {top:-0.5em;}
+sub {bottom:-0.25em;}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+	text-decoration:underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+	text-decoration:none;
+}
+
+/* 专名号：虽然 u 已经不被 html5 支持，但在所有浏览器中都是可以使用的，
+ * 要做到更好，渐进增加的话，添加 class="typo-unique" 来显示专名号
+ * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
+ * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/ 
+ */
+u, .typo-unique{
+    text-decoration:underline;
+}
+
+/* 标记，类似于手写的荧光笔的作用 */
+mark{
+    background:#fffdd1;
+}
+
+/* 代码片断 */
+pre, code{
+    font-family: 'Courier', 'Courier New', serif;
+}
+pre{
+    border:1px solid #ddd;border-left-width:0.4em;background:#fbfbfb;padding:10px;
+}
+
+/* 印刷体、版本等标记 */
+small{font-size:0.8em;color:#888;}
+
+/* 清理浮动 */
+.clearfix:after {
+	visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;
+}
+.clearfix{
+    *zoom:1;
+}
+
+/* 现代排版：保证块/段落之间的空白隔行 */
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr{
+    margin:0.6em 0 1em;
+}
+
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6 {
+   margin:1.4em 0 0.8em;
+}
+.typo h1{font-size:1.8em;}
+.typo h2{font-size:1.6em;}
+.typo h3{font-size:1.4em;}
+.typo h4{font-size:1.2em;}
+.typo h5,h6{font-size:1em;}
+
+/* 在文章中，应该还原 ul 和 ol 的样式 */
+.typo ul{
+    margin-left:1.3em;list-style:disc;
+}
+.typo ol{
+    list-style:decimal;margin-left:1.9em;
+}
+.typo li ul, .typo li ol{
+    margin-top:0;margin-bottom:0;
+}
+.typo li ul{
+    list-style:circle;
+}

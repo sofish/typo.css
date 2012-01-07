@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="./typo.css" />
+	<title>中文网页重设与排版：TYPO.CSS - 一致化浏览器排版效果，构建最适合中文阅读的网页排版</title>
+	<style>
+	   a{color:#09f;}
+	   code{color:#080;}
+	   h1, #tagline{display:inline;}
+	   #wrapper{padding:5% 8%;min-width:480px;}
+	   #tagline{font:0.8em serif;color:#888;}
+	</style>
+</head>
+<body>
+
+<div id="wrapper" class="typo">
+
+<h1>中文网页重设与排版：TYPO.CSS</h1><br />
+<h2 id="tagline">一致化浏览器排版效果，构建最适合中文阅读的网页排版</h2>
+
+<ol>
+    <li><a href="#section1">关于 TYPO.CSS</a></li>
+    <li><a href="#section2">排版实例</a>
+        <ul>
+            <li><a href="#section2-1">例1：论语学而篇第一</a></li>
+            <li><a href="#section2-2">例2：英文排版</a></li>
+        </ul>
+    </li>
+    <li><a href="#section3">附录</a></li>
+</ol>
+
+<h2 id="section1">一、关于 TYPO.CSS</h2>
+<p><em>TYPO.CSS</em> 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。</p>
+<h4>现状和如何去做：</h4>
+<p>排版是一个麻烦的问题，需要精心设计，而这个设计却是常被视觉设计师所忽略的。前端工程师更常看到这样的问题，但不便变更。因为在多个 OS 中的不同浏览器渲染不同，改动需要多的时间做回归测试，所以改变变得更困难。而像我们一般使用的 Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。TYPO.CSS 要做的就是解决中文排版的问题。</p>
+<p><strong>TYPO.CSS 测试于如下平台：</strong></p>
+<table summary="TYPO.CSS 的测试平台列表">
+    <thead>
+        <tr>
+            <th>OS/浏览器</th>
+            <th>Firefox</th>
+            <th>Chomre</th>
+            <th>Safari</th>
+            <th>Opera</th>
+            <th>IE9</th>
+            <th>IE8</th>
+            <th>IE7</th>
+            <th>IE6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mac OS X</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Windows 7</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Windows XP</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Ubuntu Linux</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>中文排版的重点和难点</h4>
+<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>。在 HTML5 中，着重号标签（<code>&lt;u&gt;</code>）已经被放弃，TYPO.CSS 也根据实际情况提供相应的方案，TYPO.CSS 排版的中文偏重注意点，详见:
+</p>
+<blockquote>
+    <b>附录一</b>：<a href="#appendix1">TYPO.CSS 排版偏重点</a>
+</blockquote>
+
+<p>目前由于个人时间和掌握平台有限，测试平台的覆盖在<abbr title="手机、平板电脑等移动平台">移动端</abbr>还没有覆盖完主流平台，希望能力的同学能加入排版的测试行列，或者加入到 TYPO.CSS 的开发。加入方法：<a href="mailto:sofish@163.com">参与 TYPO.CSS 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a href="#">issues</a>，或给<abbr title="Sofish Lin, author of TYPO.CSS" role="author">我</abbr>发<a href="mailto:sofish@163.com">邮件</a>。</p>
+
+
+<h2 id="section2">二、排版实例：</h2>
+<p>下面这个中文排版实例，来自于<cite class="typo-unique">张燕婴</cite>的《论语》，由于古文排版涉及到的元素比较多，所以采用《论语》中《学而》的第一篇作为排版实例介绍。</p>
+
+<h3 id="section2-1">例1：论语学而篇第一</h3>
+<p><small><b>作者：</b><abbr title="名丘，字仲尼">孔子</abbr>（<time>前551年9月28日－前479年4月11日</time>）</small></p>
+
+<h4>本篇引语</h4>
+<p>《学而》是《论语》第一篇的篇名。《论语》中各篇一般都是以第一章的前二三个字作为该篇的篇名。《学而》一篇包括16章，内容涉及诸多方面。其中重点是“吾日三省吾身”；“节用而爱人，使民以时”；“礼之用，和为贵”以及仁、孝、信等道德范畴。 </p>
+
+<h4>原文</h4> 
+<p>子曰<sup><a href="#note1">[1]</a></sup>：“学<sup><a href="#note2">[2]</a></sup>而时习<sup><a href="#note3">[3]</a></sup>之，不亦说<sup><a href="#note4">[4]</a></sup>乎？有朋<sup><a href="#note5">[5]</a></sup>自远方来，不亦乐<sup><a href="#note6">[6]</a></sup>乎？人不知<sup><a href="#note7">[7]</a></sup>，而不愠<sup><a href="#note8">[8]</a></sup>，不亦君子<sup><a href="#note9">[9]</a></sup>乎？” </p>
+
+<h4>注释</h4>
+<p>
+<small>
+<span id="note1">[1]</span> 子：中国古代对于有地位、有学问的男子的尊称，有时也泛称男子。《论语》书中“子曰”的子，都是指孔子而言。<br />
+<span id="note2">[2]</span> 学：孔子在这里所讲的“学”，主要是指学习西周的礼、乐、诗、书等传统文化典籍。 <br />
+<span id="note3">[3]</span> 时习：在周秦时代，“时”字用作副词，意为“在一定的时候”或者“在适当的时候”。但朱熹在《论语集注》一书中把“时”解释为“时常”。“习”，指演习礼、乐；复习诗、书。也含有温习、实习、练习的意思。 <br />
+<span id="note4">[4]</span> 说：音ｙｕè，同悦，愉快、高兴的意思。 <br />
+<span id="note5">[5]</span> 有朋：一本作“友朋”。旧注说，“同门曰朋”，即同在一位老师门下学习的叫朋，也就是志同道合的人。 <br />
+<span id="note6">[6]</span> 乐：与说有所区别。旧注说，悦在内心，乐则见于外。 <br />
+<span id="note7">[7]</span> 人不知：此句不完整，没有说出人不知道什么。缺少宾语。一般而言，知，是了解的意思。人不知，是说别人不了解自己。 <br />
+<span id="note8">[8]</span> 愠：音ｙùｎ，恼怒，怨恨。 <br />
+<span id="note9">[9]</span> 君子：《论语》书中的君子，有时指有德者，有时指有位者。此处指孔子理想中具有高尚人格的人。
+</small>
+</p> 
+
+<h4>译文</h4>
+<p>孔子说：“学了又时常温习和练习，不是很愉快吗？有志同道合的人从远方来，不是很令人高兴的吗？人家不了解我，我也不怨恨、恼怒，不也是一个有德的君子吗？” </p>
+
+<h4>评析</h4> 
+<p>宋代著名学者<cite class="typo-unique">朱熹</cite>对此章评价极高，说它是“入道之门，积德之基”。本章这三句话是人们非常熟悉的。历来的解释都是：学了以后，又时常温习和练习，不也高兴吗等等。三句话，一句一个意思，前后句子也没有什么连贯性。但也有人认为这样解释不符合原义，指出这里的“学”不是指学习，而是指学说或主张；“时”不能解为时常，而是时代或社会的意思，“习”不是温习，而是使用，引申为采用。而且，这三句话不是孤立的，而是前后相互连贯的。这三句的意思是：自己的学说，要是被社会采用了，那就太高兴了；退一步说，要是没有被社会所采用，可是很多朋友赞同<abbr title="张燕婴">我</abbr>的学说，纷纷到我这里来讨论问题，我也感到快乐；再退一步说，即使社会不采用，人们也不理解我，我也不怨恨，这样做，不也就是君子吗？（见《齐鲁学刊》1986年第6期文）这种解释可以自圆其说，而且也有一定的道理，供读者在理解本章内容时参考。 
+此外，在对“人不知，而不愠”一句的解释中，也有人认为，“人不知”的后面没有宾语，人家不知道什么呢？当时因为孔子有说话的特定环境，他不需要说出知道什么，别人就可以理解了，却给后人留下一个谜。有人说，这一句是接上一句说的，从远方来的朋友向我求教，我告诉他，他还不懂，我却不怨恨。这样，“人不知”就是“人家不知道我所讲述的”了。这样的解释似乎有些牵强。 
+总之，本章提出以学习为乐事，做到人不知而不愠，反映出孔子学而不厌、诲人不倦、注重修养、严格要求自己的主张。这些思想主张在《论语》书中多处可见，有助于对第一章内容的深入了解。 
+</p>
+
+<h3 id="section2-2">例2：英文排版</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<blockquote>
+"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…"
+    <blockquote>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…"</blockquote>
+    <blockquote>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…"
+        <blockquote>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…"</blockquote>
+    </blockquote>
+</blockquote>
+
+<h4>The standard Lorem Ipsum passage, used since the 1500s</h4>
+<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+<h4>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>
+<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
+<h4>List style in action</h4>
+<ul>
+    <li>If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+        <p>如果你希望成功，当以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。</p>
+    </li>
+    <li>Sometimes one pays most for the things one gets for nothing.
+        <p>有时候一个人为不花钱得到的东西付出的代价最高。</p>
+    </li>
+    <li>Only those who have the patience to do simple things perfectly ever acquire the skill to do difficult things easily.
+        <p>只有有耐心圆满完成简单工作的人，才能够轻而易举的完成困难的事。</p>
+    </li>
+</ul>
+
+<h4>You may want to create a perfect <code>&lt;hr /&gt;</code> line, despite the fact that there will never have one</h4>
+<hr />
+<p><abbr title="法国作家罗切福考尔德">La Racheforcauld</abbr> said: <mark>"Few things are impossible in themselves; and it is often for want of will ,rather than of means, that man fails to succeed".</mark> You just need to follow the browser's behavior, and set a right <code>margin</code> to it。it will works nice as the demo you're watching now. The following code is the best way to render typo in Chinese:</p>
+<pre>
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+h1,h2,h3,h4,h5,h6 {
+    line-height:1;font-family:Arial,sans-serif;margin:1.4em 0 0.8em;
+}
+h1{font-size:1.8em;}
+h2{font-size:1.6em;}
+h3{font-size:1.4em;}
+h4{font-size:1.2em;}
+h5,h6{font-size:1em;}
+
+/* 现代排版：保证块/段落之间的空白隔行 */
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr{
+    margin:1em 0 0.6em;
+}
+</pre>
+
+<h3 id="section3">三、附录</h3>
+
+<h5 id="appendix1">1、TYPO.CSS 排版偏重点</h5>
+<table summary="TYPO.CSS 排版偏重点">
+    <thead>
+        <tr>
+            <th>类型</th>
+            <th>语义</th>
+            <th>标签</th>
+            <th>注意点</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th rowspan="15">基础标签</th>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+          <th rowspan="6">重要符号</th>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th rowspan="4">加强类</th>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+          <th rowspan="5">注意点</th>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>2、参考文献</h3>
+<ol>
+    <li><a href="#">语义：</a></li>
+</ol>
+</div> <!-- #wrapper -->
+
+</body>
+</html>
