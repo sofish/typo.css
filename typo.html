@@ -109,7 +109,7 @@
     <b>附录一</b>：<a href="#appendix1">TYPO.CSS 排版偏重点</a>
 </blockquote>
 
-<p>目前由于个人时间和掌握平台有限，测试平台的覆盖在<abbr title="手机、平板电脑等移动平台">移动端</abbr>还没有覆盖完主流平台，希望能力的同学能加入排版的测试行列，或者加入到 TYPO.CSS 的开发。加入方法：<a href="mailto:sofish@163.com">参与 TYPO.CSS 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a href="#">issues</a>，或给<abbr title="Sofish Lin, author of TYPO.CSS" role="author">我</abbr>发<a href="mailto:sofish@163.com">邮件</a>。</p>
+<p>目前由于个人时间和掌握平台有限，测试平台的覆盖在<abbr title="手机、平板电脑等移动平台">移动端</abbr>还没有覆盖完主流平台，希望能力的同学能加入排版的测试行列，或者加入到 TYPO.CSS 的开发。加入方法：<a href="https://github.com/sofish/typo.css">参与 TYPO.CSS 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a href="https://github.com/sofish/typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of TYPO.CSS" role="author">我</abbr>发<a href="mailto:sofish@163.com">邮件</a>。</p>
 
 
 <h2 id="section2">二、排版实例：</h2>
@@ -212,163 +212,148 @@ h5,h6{font-size:1em;}
     <tbody>
         <tr>
           <th rowspan="15">基础标签</th>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>标题</td>
+          <td><code>h1</code> ～<code>h6</code></td>
+          <td>全局不强制大小，<code>.typo</code> 中标题与其对应的内容应紧贴，并且有相应的大小设置</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>上、下标</td>
+          <td><code>sup</code>/<code>sub</code></td>
+          <td>保持与 MicroSoft Office Word 等程序的日常排版一致</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>引用</td>
+          <td><code>blockquote</code></td>
+          <td>显示/嵌套样式</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>缩写</td>
+          <td><code>abbr</code></td>
+          <td>是否都有下划线，鼠标 <code>hover</code> 是否为帮助手势</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>分割线</td>
+          <td><code>hr</code></td>
+          <td>显示的 <code>padding</code> 和 <code>margin</code>正确</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>列表</td>
+          <td><code>ul</code>/<code>ol</code>/<code>dl</code></td>
+          <td>在全局没有 <code>list-style</code>，在 .<code>typo</code> 中对齐正确</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>定义列表</td>
+          <td><code>dl</code></td>
+          <td>全局 <code>padding</code> 和 <code>margin</code>为0， .<code>typo</code> 中对齐正确</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>选项</td>
+          <td><code>input[type=radio[, checkbox]]</code></td>
+          <td>是否在 <code>label</code> 中居中</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>斜体</td>
+          <td><code>i</code></td>
+          <td>只设置一种斜体，让 <code>em</code> 和  <code>cite</code> 显示为正体</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>强调</td>
+          <td><code>em</code></td>
+          <td>在全局显示正体，在 <code>.typo</code> 中显示与 <code>b</code> 和 <code>strong</code> 的样式一致，为粗休</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>加强</td>
+          <td><code>strong/b</code></td>
+          <td>显示为粗体</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>标记</td>
+          <td><code>mark</code></td>
+          <td>类似荧光笔</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>印刷</td>
+          <td><code>small</code></td>
+          <td>保持为正确字体的 80% 大小，颜色设置为浅灰色</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>表格</td>
+          <td><code>table</code></td>
+          <td>全局不显示线条，在 <code>table</code> 中显示表格外框，并且表头有浅灰背景</td>
         </tr>
         <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td>代码</td>
+            <td><code>pre</code>/<code>code</code></td>
+            <td>字体使用 <code>courier</code> 系字体，保持与 <code>serif</code> 有比较一致的显示效果</td>
         </tr>
         <tr>
-          <th rowspan="6">重要符号</th>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <th rowspan="5">特殊符号</th>
+          <td>着重号</td>
+          <td>在文字下加点（•）</td>
+          <td>在支持 <code>:after</code> 和 <code>:before</code> 的浏览器可以做渐进增强实现</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>专名号</td>
+          <td><u>林建锋</u></td>
+          <td>专名号，有下划线，使用 <code>u</code> 或都 <code>.typo-u</code> 类</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>破折号</td>
+          <td>——</td>
+          <td>保持一划，而非两划</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>人民币</td>
+          <td>&yen;</td>
+          <td>使用两平等线的符号，或者 HTML 实体符号 <code>&amp;yen;</code></td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
+          <td>删除符</td>
+          <td><del>已删除（deleted）</del></td>
+          <td>一致化各浏览器显示，中英混排正确</td>
         </tr>
         <tr>
           <th rowspan="4">加强类</th>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>专名号</td>
+          <td><code>.typo-u</code></td>
+          <td>由于 <code>u</code> 已被 HTML5 放弃，在向后兼容上推荐使用 class 代替标签</td>
         </tr>
         <tr>
-          <td>-</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>着重符</td>
+          <td><code>.typo-em</code></td>
+          <td>利用 <code>:after</code> 和 <code>:before</code> 实现着重符</td>
         </tr>
         <tr>
-          <td>-</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>首字下沉</td>
+          <td><code>.typo-first</code></td>
+          <td>特殊排版</td>
         </tr>
         <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td>清除浮动</td>
+            <td><code>.clearfix</code></td>
+            <td>与一般 CSS Reset 保持一对致 API</td>
         </tr>
         <tr>
           <th rowspan="5">注意点</th>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td colspan="3">（1）中英文混排行高/行距</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td colspan="3">（2）上下标在 IE 中显示效果</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td colspan="3">（3）块/段落分割空白是否符合设计原则</td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td colspan="3">（4）input 多余空间问题</td>
         </tr>
         <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <td colspan="3">（5）默认字体色彩，目前采用 <code>#333</code> 在各种浏览显示比较好</td>
         </tr>
     </tbody>
 </table>
 
 <h5 id="appendix2">2、开源许可</h5>
-<p>TYPO.CSS 基于 MIT License 开源，使用代码只需说明来源，或者引用 <a href="#">license.txt</a> 即可。</p>
+<p>TYPO.CSS 基于 <a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a href="http://typo.sofish.de/license.txt">license.txt</a> 即可。</p>
 </div> <!-- #wrapper -->
 
 </body>
