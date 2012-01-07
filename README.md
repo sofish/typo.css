@@ -1,3 +1,5 @@
+Alpha 中，各路牛人都来支持一下！预览：[typo.css](http://typo.sofish.de)
+
 ## TYPO.CSS
 
 目的: 在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。
@@ -6,11 +8,68 @@
 
 ## TYPO.CSS 已经在如下浏览器测试通过：
 
-- Mozilla Firefox
-- Google Chome
-- Opera
-- IE 6/7/8/9
-- iPhone
+<table summary="TYPO.CSS 的测试平台列表">
+    <thead>
+        <tr>
+            <th>OS/浏览器</th>
+            <th>Firefox</th>
+            <th>Chomre</th>
+            <th>Safari</th>
+            <th>Opera</th>
+            <th>IE9</th>
+            <th>IE8</th>
+            <th>IE7</th>
+            <th>IE6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mac OS X</td>
+            <td>√</td>
+            <td>√</td>
+            <td>√</td>
+            <td>√</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Windows 7</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Windows XP</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Ubuntu Linux</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
+
 
 ## API 简介
 
@@ -20,7 +79,9 @@
 - 清除浮动：添加 class `.clearfix`
 - 排版：添加 class `.typo`
 - 增强类：
- - 专名号：`<u>` 标签或者 class `.type-unique`
+ - 专名号：`<u>` 标签或者 class `.typo-u`
+ - 着重号：`.typo-em`
+ - 首定下沉：`.typo-first`
 
 ## 开源许可
 
