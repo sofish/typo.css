@@ -1,4 +1,4 @@
-Alpha 中，各路牛人都来支持一下！预览：[typo.css](http://typo.sofish.de)
+Alpha 中，各路牛人都来支持一下，加入开发啊！预览：[typo.css](http://typo.sofish.de)
 
 ## TYPO.CSS
 
