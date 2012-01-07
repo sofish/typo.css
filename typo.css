@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-/* 
-	@名称: base
-	@功能: 重设浏览器默认样式
-*/
-
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html{
 	color:#333;
@@ -40,19 +35,9 @@ input,select,textarea{
 table{
 	border-collapse:collapse;border-spacing:0;
 }
-table th, table td{
-    border:1px solid #ddd;padding:5px 10px;
-}
-table th{
-    background:#fbfbfb;
-}
-table thead th{
-    background:#f1f1f1;
-}
-
 /* IE bug fixed: th 不继承 text-align*/
-th{
-	text-align:inherit;
+th {
+    text-align:inherit;
 }
 
 /* 去除默认边框 */
@@ -187,4 +172,15 @@ small{font-size:0.8em;color:#888;}
 }
 .typo li ul{
     list-style:circle;
+}
+
+/* 同 ul/ol，在文章中应用 table 基本格式 */
+.typo table th, .typo table td{
+    border:1px solid #ddd;padding:5px 10px;
+}
+.typo table th{
+    background:#fbfbfb;
+}
+.typo table thead th{
+    background:#f1f1f1;
 }
