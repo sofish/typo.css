@@ -104,17 +104,21 @@
 </table>
 
 <h4>中文排版的重点和难点</h4>
-<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>。在 HTML5 中，着重号标签（<code>&lt;u&gt;</code>）已经被放弃，TYPO.CSS 也根据实际情况提供相应的方案，TYPO.CSS 排版的中文偏重注意点，详见:
-</p>
+<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>。在 HTML5 中，着重号标签（<code>&lt;u&gt;</code>）已经被放弃，TYPO.CSS 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
+<ol>
+    <li>语义：语义对应的用法和样式是否与中文排版一致</li>
+    <li>表现：在各浏览器中的字体、大小和缩放是否如排版预期</li>
+</ol>
+<p>对于这些，TYPO.CSS 排版项目的中文偏重注意点，都添加在附录中，详见：</p>
 <blockquote>
     <b>附录一</b>：<a href="#appendix1">TYPO.CSS 排版偏重点</a>
 </blockquote>
 
-<p>目前由于个人时间和掌握平台有限，测试平台的覆盖在<abbr title="手机、平板电脑等移动平台">移动端</abbr>还没有覆盖完主流平台，希望能力的同学能加入排版的测试行列，或者加入到 TYPO.CSS 的开发。加入方法：<a href="https://github.com/sofish/typo.css">参与 TYPO.CSS 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a href="https://github.com/sofish/typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of TYPO.CSS" role="author">我</abbr>发<a href="mailto:sofish@163.com">邮件</a>。</p>
+<p>目前仍处于 alpha 开发阶段，测试平台的覆盖，特别是在<abbr title="手机、平板电脑等移动平台">移动端</abbr>上还没有覆盖完主流平台，希望有能力的同学能加入测试行列，或者加入到 TYPO.CSS 的开发。加入方法：<a href="https://github.com/sofish/typo.css">参与 TYPO.CSS 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a href="https://github.com/sofish/typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of TYPO.CSS" role="author">我</abbr>发<a href="mailto:sofish@163.com">邮件</a>。</p>
 
 
 <h2 id="section2">二、排版实例：</h2>
-<p>下面这个中文排版实例，来自于<cite class="typo-unique">张燕婴</cite>的《论语》，由于古文排版涉及到的元素比较多，所以采用《论语》中《学而》的第一篇作为排版实例介绍。</p>
+<p>提供2个排版实例，第一个中文实例来自于来自于<cite class="typo-unique">张燕婴</cite>的《论语》，由于古文排版涉及到的元素比较多，所以采用《论语》中《学而》的第一篇作为排版实例介绍；第2个来自到经典的 Lorem Ipsum，并加入了一些代码和列表等比较具有代码性的排版元素。</p>
 
 <h3 id="section2-1">例1：论语学而篇第一</h3>
 <p><small><b>作者：</b><abbr title="名丘，字仲尼">孔子</abbr>（<time>前551年9月28日－前479年4月11日</time>）</small></p>
@@ -214,7 +218,7 @@ h5,h6{font-size:1em;}
         <tr>
           <th rowspan="15">基础标签</th>
           <td>标题</td>
-          <td><code>h1</code> ～<code>h6</code></td>
+          <td><code>h1</code> ～ <code>h6</code></td>
           <td>全局不强制大小，<code>.typo</code> 中标题与其对应的内容应紧贴，并且有相应的大小设置</td>
         </tr>
         <tr>
@@ -250,7 +254,7 @@ h5,h6{font-size:1em;}
         <tr>
           <td>选项</td>
           <td><code>input[type=radio[, checkbox]]</code></td>
-          <td>是否在 <code>label</code> 中居中</td>
+          <td>与其他 <code>form</code> 元素排版时是否居中</td>
         </tr>
         <tr>
           <td>斜体</td>
