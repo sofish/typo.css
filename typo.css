@@ -186,11 +186,6 @@ small {
 	zoom: 1
 }
 
-/* TODO: 请解释用意 */
-.typo em {
-	font-weight: 700;
-}
-
 /* 现代排版：保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
 	margin: 0.6em 0 1em;
@@ -244,4 +239,14 @@ small {
 }
 .typo table thead th {
 	background: #f1f1f1;
+}
+
+/* TODO: 供着重号使用 */
+.typo-em {
+	font-weight: 700;
+}
+
+/* TODO: 供首字下沉使用 */
+.typo-first{
+
 }
