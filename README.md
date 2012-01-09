@@ -37,6 +37,8 @@
 
 ### 三、开源许可
 
-&copy; [Sofish Lin](http://sofish.de)：作者，目前的唯一维护者，期待各路牛人加入！<br />
+[Sofish Lin](http://sofish.de): founder, creator of [Alice CSS](http://aliceui.com), a code writter, a semi-designer. <br />
+[Hotoo](https://github.com/hotoo): developer, VIM guru, front-end web developer @ alipay.com
+
 基于 [MIT License](http://zh.wikipedia.org/wiki/MIT_License) 开源，使用代码只需说明来源，或者引用 [license.txt](https://github.com/sofish/typo.css/blob/master/license.txt) 即可。
 
