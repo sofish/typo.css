@@ -21,6 +21,8 @@
  
 目前的设计是这样的，尽量保持完整的 reset，比如让 ul/ol 无样式并且无多余的 `padding`/`margin`，这是必须的，因为一个网可能需要很多自定义的的内容，在实践中我们并不希望像 ul/ol 有样式，这样我们得用优先级去覆盖，这是非常麻烦的事。所以 typo.css 并不像 normalize.css，后者给每一个元素都预先定义了样式，这样在自定义的时候将是非常痛苦的。要大保持干净的所有元素一致化的 reset 才是最佳实践。
 
+为什么不是 [Han](http://i.minus.com/iQInhZPgOlHEj.png) 这个项目？
+
 2、`class="typo"` 阅读内容排版
 
 在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofish.de]() 一样，让用户阅读起来更舒服。
