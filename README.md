@@ -2,7 +2,9 @@
 
 目标：一致化浏览器排版效果，构建最适合中文阅读的网页排版。包括桌面和移动平台。
 
-    Alpha 中，各路牛人都来支持一下，加入开发啊！预览：[typo.css](http://typo.sofish.de)
+    Alpha 中，各路牛人都来支持一下，加入开发啊！
+
+预览：[typo.css](http://typo.sofish.de)
 
 ### 一、目录结构    
     .
