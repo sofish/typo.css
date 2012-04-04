@@ -188,7 +188,7 @@ small {
 }
 
 /* 现代排版：保证块/段落之间的空白隔行 */
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr {
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table {
 	margin: 0.6em 0 1em;
 }
 
