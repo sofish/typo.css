@@ -196,8 +196,9 @@ small {
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-5, .typo-h6 {
-    font: 100%/1 Verdana, "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+    font: 100%/1 Verdana, "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	margin: 1.4em 0 0.8em;
+	font-weight: 700/9;
 }
 .typo h1, .typo-h1 {
 	font-size: 1.8em;
