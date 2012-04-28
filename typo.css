@@ -28,7 +28,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-	font: 100%/1.5 Arial, "Microsoft Yahei";
+	font: 14px/1.5 Arial, "Microsoft Yahei";
 }
 
 input, select, textarea {
