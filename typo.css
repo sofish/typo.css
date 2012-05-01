@@ -250,6 +250,8 @@ small {
 }
 
 /* TODO: 供首字下沉使用 */
+/* Usage: <p><span class="typo-first"></span></p>*/
 .typo-first{
-
+	font-size: 2em;
+	line-height: 0.75em;
 }
