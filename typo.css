@@ -28,7 +28,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-	font: 14px/1.5 "Hiragino Sans GB", "Microsoft Yahei";
+	font: 14px/1.5 "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
 
 input, select, textarea {
@@ -144,7 +144,7 @@ mark {
 
 /* 代码片断 */
 pre, code {
-	font-family: 'Courier New', Courier, "Hiragino Sans GB";
+	font-family: "Courier New", Courier, "Hiragino Sans GB", monospace;
 }
 pre {
 	border: 1px solid #ddd;
@@ -194,7 +194,6 @@ small {
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-5, .typo-h6 {
-    font: 100%/1 "Hiragino Sans GB", "Microsoft Yahei";
 	margin: 1.4em 0 0.8em;
 	font-weight: 700/9;
 }
