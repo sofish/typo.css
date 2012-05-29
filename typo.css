@@ -194,7 +194,8 @@ small {
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-5, .typo-h6 {
-	margin-bottom: 0.8em;
+	margin-bottom: 0.4em;
+	line-height: 1.5;
 	font-weight: 700/9;
 }
 .typo h1, .typo-h1 {
