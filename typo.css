@@ -188,7 +188,7 @@ small {
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
-	margin: 0.6em 0 1em;
+	margin-bottom: 8px;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
