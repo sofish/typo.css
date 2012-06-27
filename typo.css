@@ -2,7 +2,7 @@
 
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
-	color: #333;
+	color: #555;
 	background: #fff;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -28,11 +28,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-	font: 14px/1.5 "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
-}
-
-input, select, textarea {
-	font-size: 1em;
+	font: 500 14px/1.8 'Hiragino Sans GB', sans-serif;
 }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
@@ -108,7 +104,10 @@ sub, sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
-	vertical-align: baseline;
+	vertical-align: text-top\9;
+}
+:root sub, :root sup{
+	vertical-align: baseline; /* for ie9 and other mordern browsers */
 }
 sup {
 	top: -0.5em;
@@ -144,7 +143,7 @@ mark {
 
 /* 代码片断 */
 pre, code {
-	font-family: "Courier New", Courier, "Hiragino Sans GB", monospace;
+	font-family: "Courier New", Courier, monospace;
 }
 pre {
 	border: 1px solid #ddd;
@@ -157,16 +156,6 @@ pre {
 small {
 	font-size: 12px;
 	color: #888;
-}
-
-/* 清理浮动 */
-.clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
 }
 
 .clearfix:before, .clearfix:after {
@@ -182,13 +171,16 @@ small {
 	zoom: 1
 }
 
-/* TODO: 英文排版不是很好看 */
-.typo{line-height:1.8;}
-
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
 	margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 500;
+	font-weight: 800\9;
+	color:#333;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
@@ -196,7 +188,6 @@ small {
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
 	margin-bottom: 0.4em;
 	line-height: 1.5;
-	font-weight: 700/9;
 }
 .typo h1, .typo-h1 {
 	font-size: 1.8em;
