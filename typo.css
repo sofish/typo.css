@@ -47,6 +47,11 @@ fieldset, img {
 	border: 0;
 }
 
+/* 解决 IE6-7 图片缩放锯齿问题 */
+img {
+    -ms-interpolation-mode: bicubic;    
+}
+
 /* ie6 7 8(q) bug 显示为行内表现 */
 iframe {
 	display: block;
