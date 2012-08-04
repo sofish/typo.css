@@ -23,7 +23,7 @@
 
 2、`class="typo"` 阅读内容排版
 
-在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofish.de]() 一样，让用户阅读起来更舒服。
+在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofish.de](http://typo.sofish.de) 一样，让用户阅读起来更舒服。
  
 3、增加类：
 
