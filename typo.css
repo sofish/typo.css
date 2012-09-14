@@ -85,7 +85,7 @@ del {
 	text-decoration: line-through;
 }
 
-address, caption, cite, code, den, em, th, var {
+address, caption, cite, code, dfn, em, th, var {
 	font-style: normal;
 	font-weight: 500;
 }
