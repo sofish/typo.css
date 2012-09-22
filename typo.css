@@ -149,6 +149,8 @@ mark {
 /* 代码片断 */
 pre, code {
 	font-family: "Courier New", Courier, monospace;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 pre {
 	border: 1px solid #ddd;
