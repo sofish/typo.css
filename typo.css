@@ -87,7 +87,7 @@ del {
 
 address, caption, cite, code, dfn, em, th, var {
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 /* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
@@ -240,6 +240,12 @@ h1, h2, h3, h4, h5, h6{
 }
 .typo table thead th, .typo-table thead th {
 	background: #f1f1f1;
+}
+
+/* 去除 webkit 中 input 和 textarea 的默认样式  */
+.typo-input, .typo-textarea{
+	-webkit-appearance:none;
+	border-radius:0;
 }
 
 /* TODO: 供着重号使用 */
