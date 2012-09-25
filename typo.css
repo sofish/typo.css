@@ -28,7 +28,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-	font: 500 14px/1.8 'Hiragino Sans GB', sans-serif;
+	font: 500 14px/1.8 'WenQuanYi Micro Hei', 'Hiragino Sans GB', sans-serif;
 }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
