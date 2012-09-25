@@ -29,7 +29,7 @@ audio, canvas, video {
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
 	font:500 14px/1.8 Lucida Grande,Kozuka Gothic Pr6N,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-	font-family:Lucida Grande,Kozuka Gothic Pr6N,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif\9;
+	font-family:Verdana,Kozuka Gothic Pr6N,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif\9;
 }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
