@@ -151,8 +151,7 @@ small {
   clear: both;
 }
 
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
-.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
+.typo p, .typo-p, .typo pre, .typo-pre, .typo ul, .typo-ul, .typo ol, .typo-ol, .typo dl, .typo-dl, .typo form, .typo-form, .typo hr, .typo-hr, .typo table, .typo-table {
   margin-bottom: 1em;
 }
 
@@ -162,8 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
-.typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
+.typo h1, .typo-h1, .typo h2, .typo-h2, .typo h3, .typo-h3, .typo h4, .typo-h4, .typo h5, .typo-h5, .typo h6, .typo-h6 {
   margin-bottom: 0.4em;
   line-height: 1.5;
 }

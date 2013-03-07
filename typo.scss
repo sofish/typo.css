@@ -179,9 +179,13 @@ small {
 }
 
 // 保证块/段落之间的空白隔行
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
-.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
+%typo-p {
 	margin-bottom: 1em;
+}
+@each $tag in p, pre, ul, ol, dl, form, hr, table {
+	.typo #{$tag}, .typo-#{$tag} {
+		@extend %typo-p;
+	}
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -191,11 +195,16 @@ h1, h2, h3, h4, h5, h6{
 }
 
 // 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化
-.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
-.typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
+%typo-h {
 	margin-bottom: 0.4em;
 	line-height: 1.5;
 }
+@each $tag in h1, h2, h3, h4, h5, h6 {
+	.typo #{$tag}, .typo-#{$tag} {
+		@extend %typo-h;
+	}
+}
+
 .typo h1, .typo-h1 {
 	font-size: 1.8em;
 }
