@@ -151,8 +151,7 @@ small {
   clear: both;
 }
 
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
-.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
+.typo p, .typo-p, .typo pre, .typo-pre, .typo ul, .typo-ul, .typo ol, .typo-ol, .typo dl, .typo-dl, .typo form, .typo-form, .typo hr, .typo-hr, .typo table, .typo-table {
   margin-bottom: 1em;
 }
 

@@ -179,9 +179,14 @@ small {
 }
 
 // 保证块/段落之间的空白隔行
-.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
-.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
+%typo-p {
 	margin-bottom: 1em;
+}
+
+@each $tag in p, pre, ul, ol, dl, form, hr, table {
+	.typo #{$tag}, .typo-#{$tag} {
+		@extend %typo-p;
+	}
 }
 
 h1, h2, h3, h4, h5, h6{
