@@ -203,7 +203,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   margin-left: 2em;
 }
-
 .typo li ul, .typo-ul ul, .typo-ol ul {
   list-style: circle;
 }
@@ -212,11 +211,9 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ddd;
   padding: 5px 10px;
 }
-
 .typo table th, .typo-table th {
   background: #fbfbfb;
 }
-
 .typo table thead th, .typo-table thead th {
   background: #f1f1f1;
 }

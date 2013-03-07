@@ -221,25 +221,32 @@ h1, h2, h3, h4, h5, h6{
 	list-style: decimal;
 	margin-left: 1.9em;
 }
-.typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol {
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: 2em;
-}
-.typo li ul, .typo-ul ul, .typo-ol ul {
-	list-style: circle;
+.typo li, .typo-ul, .typo-ol {
+	ul, ol {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 2em;	
+	}
+	
+	ul {
+		list-style: circle;
+	}
 }
 
 // 同 ul/ol，在文章中应用 table 基本格式
-.typo table th, .typo table td, .typo-table th, .typo-table td {
-	border: 1px solid #ddd;
-	padding: 5px 10px;
-}
-.typo table th, .typo-table th {
-	background: #fbfbfb;
-}
-.typo table thead th, .typo-table thead th {
-	background: #f1f1f1;
+.typo table, .typo-table {
+	th, td {
+		border: 1px solid #ddd;
+		padding: 5px 10px;
+	}
+
+	th {
+		background: #fbfbfb;
+	}
+	
+	thead th {
+		background: #f1f1f1;
+	}
 }
 
 // 去除 webkit 中 input 和 textarea 的默认样式
