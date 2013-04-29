@@ -31,7 +31,7 @@ body, button, input, select, textarea {
 	font:500 14px/1.8 Lucida,Verdana,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
 }
 
-/* IE6 Button 宽度自适应 */
+/* IE6 Button 宽度自适应  */
 * html button {
 	width: auto;
 	overflow:visible;
