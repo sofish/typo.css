@@ -31,6 +31,12 @@ body, button, input, select, textarea {
 	font:500 14px/1.8 Lucida,Verdana,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
 }
 
+/* IE6 Button 宽度自适应 */
+* html button {
+	width: auto;
+	overflow:visible;
+}
+
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {
 	border-collapse: collapse;
