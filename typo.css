@@ -9,6 +9,8 @@ html {
     text-rendering: optimizelegibility;
 }
 
+:-moz-selection{background:#333332;color:#fff;}
+
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	margin: 0;
@@ -60,14 +62,14 @@ iframe {
 
 /* 块/段落引用 */
 blockquote {
-	margin: 1em 4em 1em 2em;
+	margin: 1em 4em 1em 0;
 	padding: 0.6em 1em;
-	background: #f1f1f1;
+	background: #f9f9f9;
+    border-left: 0.4em solid #ddd;
 }
 blockquote blockquote {
 	padding: 0 0 0 1em;
 	margin-left: 2em;
-	border-left: 0.4em solid #ddd;
 }
 
 /* Firefox 以外，元素没有下划线，需添加 */
