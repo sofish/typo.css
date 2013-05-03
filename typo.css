@@ -160,6 +160,9 @@ pre {
 	padding: 10px;
 }
 
+/* 一致化 horizonal rule */
+hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:10px;*color:pink;*filter:chroma(color=pink);height:10px;*margin:-7px 0 2px;}
+
 /* 底部印刷体、版本等标记 */
 small {
 	font-size: 12px;
