@@ -60,7 +60,7 @@ iframe {
 
 /* 块/段落引用 */
 blockquote {
-	margin: 1em 4em 1em 0;
+	margin: 1em 0;
 	padding: 0.6em 1em;
 	background: #f9f9f9;
     border-left: 0.4em solid #ddd;
