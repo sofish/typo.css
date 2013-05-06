@@ -32,6 +32,15 @@ body, button, input, select, textarea {
 	font:500 14px/1.8 Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
 }
 
+/* 去除 IE6 input/button 多余的空白 */
+button, input {
+    *width: auto;
+    *overflow: visible;
+
+    /* 让 input 和 button 一样高 */
+    line-height:22px;
+}
+
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {
 	border-collapse: collapse;
