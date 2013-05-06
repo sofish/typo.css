@@ -29,7 +29,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-	font:500 14px/1.8 Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+	font:500 14px/1.8 Hiragino Sans GB, Microsoft Yahei, WenQuanYi Micro Hei, sans-serif;
 }
 
 /* 去除 IE6 input/button 多余的空白 */
@@ -203,7 +203,7 @@ figcaption {
 h1, h2, h3, h4, h5, h6{
 	font-weight: 500;
 	font-weight: 800\9;
-    font-family: Helvetica Neue,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+    font-family: Helvetica Neue,Hiragino Sans GB,Microsoft Yahei, WenQuanYi Micro Hei,sans-serif;
 	color:#333;
 }
 
