@@ -273,6 +273,6 @@ h1, h2, h3, h4, h5, h6{
 ::selection {background:#08c;color:#fff;}
 
 /* TODO: 供着重号使用 */
-.typo-em, .typo em {
+.typo-em, .typo em, legend, caption {
 	font-weight: 700;
 }
