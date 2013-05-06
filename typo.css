@@ -41,6 +41,12 @@ button, input {
     line-height:22px;
 }
 
+/* IE6 Button 宽度自适应 */
+button, input {
+	*width: auto;
+	*overflow:visible;
+}
+
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {
 	border-collapse: collapse;
