@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* 同 ul/ol，在文章中应用 table 基本格式 */
-.typo table th, .typo table td, .typo-table th, .typo-table td {
+.typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption{
 	border: 1px solid #ddd;
 	padding: 5px 10px;
 }
@@ -257,6 +257,9 @@ h1, h2, h3, h4, h5, h6{
 }
 .typo table thead th, .typo-table thead th {
 	background: #f1f1f1;
+}
+.typo table .caption {
+    border-bottom:none;
 }
 
 /* 去除 webkit 中 input 和 textarea 的默认样式  */
