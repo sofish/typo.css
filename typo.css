@@ -181,6 +181,11 @@ figcaption {
 	color: #888;
 }
 
+/* 可拖动文件添加拖动手势 */
+[draggable] {
+    cursor: move;
+}
+
 .clearfix:before, .clearfix:after {
 	content: "";
 	display: table;
@@ -202,7 +207,7 @@ figcaption {
 
 h1, h2, h3, h4, h5, h6{
 	font-weight: 500;
-	font-weight: 800\9;
+	*font-weight: 800;
     font-family: Helvetica Neue, Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
 	color:#333;
 }
