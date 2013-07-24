@@ -170,7 +170,14 @@ pre {
 }
 
 /* 一致化 horizonal rule */
-hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:10px;*color:pink;*filter:chroma(color=pink);height:10px;*margin:-7px 0 2px;}
+hr{
+    border:none;
+    border-bottom:1px solid #cfcfcf;
+    margin-bottom:10px;
+    *color:pink;*filter:chroma(color=pink);
+    height:10px;
+    *margin:-7px 0 2px;
+}
 
 /* 底部印刷体、版本等标记 */
 small, .typo-small, 
@@ -197,6 +204,15 @@ figcaption {
 
 .clearfix {
 	zoom: 1
+}
+
+/* 强制文本换行 */
+.textwrap, .textwrap td, .textwrap th{
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.textwrap-table{
+    table-layout:fixed;
 }
 
 /* 保证块/段落之间的空白隔行 */
@@ -274,10 +290,14 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* 高亮选中 */
-::-moz-selection {background:#08c;color:#fff;}
-::selection {background:#08c;color:#fff;}
+::-moz-selection {
+    background:#08c;
+    color:#fff;
+}
+::selection {
+    background:#08c;
+    color:#fff;
+}
 
 /* TODO: 供着重号使用 */
-.typo-em, .typo em, legend, caption {
-	font-weight: 700;
-}
+.typo-em, .typo em, legend, caption {font-weight: 700;}
