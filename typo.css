@@ -2,34 +2,34 @@
 
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
-	color: #444333;
-	background: #fff;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+    color: #444333;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     text-rendering: optimizelegibility;
 }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 /* HTML5 媒体文件跟 img 保持一致 */
 audio, canvas, video {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
 }
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-	font:500 0.875em/1.8 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font:500 0.875em/1.8 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
 
 /* 去除 IE6 input/button 多余的空白 */
@@ -43,18 +43,18 @@ button, input {
 
 /* 去掉各Table  cell 的边距并让其边重合 */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* IE bug fixed: th 不继承 text-align*/
 th {
-	text-align: inherit;
+    text-align: inherit;
 }
 
 /* 去除默认边框 */
 fieldset, img {
-	border: 0;
+    border: 0;
 }
 
 /* 解决 IE6-7 图片缩放锯齿问题 */
@@ -64,83 +64,83 @@ img {
 
 /* ie6 7 8(q) bug 显示为行内表现 */
 iframe {
-	display: block;
+    display: block;
 }
 
 /* 块/段落引用 */
 blockquote {
     font-family:Optima, Georgia, STSong, serif;
-	margin: 1em 0;
+    margin: 1em 0;
     color:#999;
-	padding: 0.6em 1em;
-	background:#f8f8f8;
+    padding: 0.6em 1em;
+    background:#f8f8f8;
     border-left: 0.4em solid #ddd;
 }
 blockquote blockquote {
-	padding: 0 0 0 1em;
-	margin-left: 2em;
+    padding: 0 0 0 1em;
+    margin-left: 2em;
 }
 
 /* Firefox 以外，元素没有下划线，需添加 */
 acronym, abbr {
-	border-bottom: 1px dotted;
-	font-variant: normal;
+    border-bottom: 1px dotted;
+    font-variant: normal;
 }
 
 /* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
 abbr {
-	cursor: help;
+    cursor: help;
 }
 
 /* 一致的 del 样式 */
 del {
-	text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 address, caption, cite, code, dfn, em, th, var {
-	font-style: normal;
-	font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
 }
 
 /* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
 ul, ol {
-	list-style: none;
+    list-style: none;
 }
 
 /* 对齐是排版最重要的因素, 别让什么都居中 */
 caption, th {
-	text-align: left;
+    text-align: left;
 }
 
 q:before, q:after {
-	content: '';
+    content: '';
 }
 
 /* 统一上标和下标 */
 sub, sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: text-top\9;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: text-top\9;
 }
 :root sub, :root sup{
-	vertical-align: baseline; /* for ie9 and other mordern browsers */
+    vertical-align: baseline; /* for ie9 and other mordern browsers */
 }
 sup {
-	top: -0.5em;
+    top: -0.5em;
 }
 sub {
-	bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 /* 让链接在 hover 状态下显示下划线 */
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* 默认不显示下划线，保持页面简洁 */
 ins, a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 /* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
@@ -150,24 +150,24 @@ ins, a {
  * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/ 
  */
 u, .typo-u {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* 标记，类似于手写的荧光笔的作用 */
 mark {
-	background: #fffdd1;
+    background: #fffdd1;
 }
 
 /* 代码片断 */
 pre, code {
-	font-family: "Courier New", Courier, monospace;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 pre {
-	background: #f8f8f8;
+    background: #f8f8f8;
     border:1px solid #ddd;
-	padding: 1em 1.5em;
+    padding: 1em 1.5em;
 }
 
 /* 一致化 horizonal rule */
@@ -185,8 +185,8 @@ small, .typo-small,
 
 /* 图片说明 */
 figcaption {
-	font-size: 0.9em;
-	color: #888;
+    font-size: 0.9em;
+    color: #888;
 }
 
 /* 可拖动文件添加拖动手势 */
@@ -195,16 +195,16 @@ figcaption {
 }
 
 .clearfix:before, .clearfix:after {
-	content: "";
-	display: table;
+    content: "";
+    display: table;
 }
 
 .clearfix:after {
-	clear: both
+    clear: both
 }
 
 .clearfix {
-	zoom: 1
+    zoom: 1
 }
 
 /* 强制文本换行 */
@@ -219,67 +219,67 @@ figcaption {
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
-	margin-bottom: 1.2em;
+    margin-bottom: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-weight: 500;
-	*font-weight: 800;
+    font-weight: 500;
+    *font-weight: 800;
     font-family: Helvetica Neue, Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-	color:#333;
+    color:#333;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
-	margin-bottom: 0.4em;
-	line-height: 1.5;
+    margin-bottom: 0.4em;
+    line-height: 1.5;
 }
 .typo h1, .typo-h1 {
-	font-size: 1.8em;
+    font-size: 1.8em;
 }
 .typo h2, .typo-h2 {
-	font-size: 1.6em;
+    font-size: 1.6em;
 }
 .typo h3, .typo-h3 {
-	font-size: 1.4em;
+    font-size: 1.4em;
 }
 .typo h4, .typo-h4 {
-	font-size: 1.2em;
+    font-size: 1.2em;
 }
 .typo h5, .typo h6, .typo-h5, .typo-h6 {
-	font-size: 1em;
+    font-size: 1em;
 }
 
 /* 在文章中，应该还原 ul 和 ol 的样式 */
 .typo ul, .typo-ul {
-	margin-left: 1.3em;
-	list-style: disc;
+    margin-left: 1.3em;
+    list-style: disc;
 }
 .typo ol, .typo-ol {
-	list-style: decimal;
-	margin-left: 1.9em;
+    list-style: decimal;
+    margin-left: 1.9em;
 }
 .typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol {
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
 }
 .typo li ul, .typo-ul ul, .typo-ol ul {
-	list-style: circle;
+    list-style: circle;
 }
 
 /* 同 ul/ol，在文章中应用 table 基本格式 */
 .typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption{
-	border: 1px solid #ddd;
-	padding: 0.5em 1em;
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
     color:#666;
 }
 .typo table th, .typo-table th {
-	background: #fbfbfb;
+    background: #fbfbfb;
 }
 .typo table thead th, .typo-table thead th {
-	background: #f1f1f1;
+    background: #f1f1f1;
 }
 .typo table .caption {
     border-bottom:none;
@@ -287,8 +287,8 @@ h1, h2, h3, h4, h5, h6{
 
 /* 去除 webkit 中 input 和 textarea 的默认样式  */
 .typo-input, .typo-textarea{
-	-webkit-appearance:none;
-	border-radius:0;
+    -webkit-appearance:none;
+    border-radius:0;
 }
 
 /* 高亮选中 */
