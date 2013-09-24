@@ -7,7 +7,6 @@
 ### 一、目录结构    
     .
     ├── README.md           --- 使用帮助
-    ├── TODO.md             --- TODO-List
     ├── license.txt         --- 许可证
     ├── typo.css            --- 将应用于你的项目
     └── typo.html           --- Demo/预览
@@ -15,7 +14,8 @@
 
 ### 二、TYPO.CSS 的设计和使用
 
-建议看源代码，特别是注释，需要认真看。`typo.css` 主要包括：
+
+## TYPO.CSS 主要包括：
 
 1、一般 reset.css 所需的内容
  
@@ -24,6 +24,8 @@
 2、`class="typo"` 阅读内容排版
 
 在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofish.de](http://typo.sofish.de) 一样，让用户阅读起来更舒服。
+
+在父容器在没有添加 `class="typo"` 的时候，可以使用 `class="typo-标签"`（如 `class="typo-ul"`）来实现像 `.typo > ul` 这样结构的样式。
  
 3、增加类：
 
@@ -31,9 +33,9 @@
 
 (1) 专名号：使用标签 `<u>` 或者 `.typo-u` <br />
 (2) 着重号：使用 class `.typo-em` <br />
-(3) 首字下沉：使用 class `.typo-first` <br />
-(4) 清理浮动：与一般 reset.css 保持一致 `.clearfix`
-(5) 强制换行：添加 `.textwrap` 到文本所在的容器，如果是 `table` 测还需要 `.textwrap-table`
+(3) 清理浮动：与一般 reset.css 保持一致 `.clearfix`
+(4) 强制换行：添加 `.textwrap` 到文本所在的容器，如果是 `table` 测还需要 `.textwrap-table`
+(5) 衬线字体：添加 `.serif`
  
 
 ### 三、开源许可

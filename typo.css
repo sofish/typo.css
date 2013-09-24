@@ -219,6 +219,9 @@ figcaption {
     table-layout:fixed;
 }
 
+/* 提供 serif 版本的字体设置 */
+.serif{font-family:Palatino, Optima, Georgia, serif;}
+
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
