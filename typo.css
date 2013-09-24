@@ -80,6 +80,9 @@ blockquote blockquote {
     padding: 0 0 0 1em;
     margin-left: 2em;
 }
+blockquote p {
+    margin-bottom: 0;
+}
 
 /* Firefox 以外，元素没有下划线，需添加 */
 acronym, abbr {
