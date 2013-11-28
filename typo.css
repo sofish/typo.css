@@ -38,7 +38,13 @@ button, input {
     *overflow: visible;
 
     /* 让 input 和 button 一样高 */
-    line-height:22px;
+    line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
 
 /* 去掉各Table  cell 的边距并让其边重合 */
