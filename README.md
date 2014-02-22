@@ -6,10 +6,11 @@
 
 ### 一、目录结构    
     .
-    ├── README.md           --- 使用帮助
-    ├── license.txt         --- 许可证
-    ├── typo.css            --- 将应用于你的项目
-    └── typo.html           --- Demo/预览
+    ├── README.md            --- 使用帮助
+    ├── license.txt          --- 许可证
+    ├── typo-no-comments.css --- 无注释版，适用于项目应用以及 Sass 等预编译器
+    ├── typo.css             --- 带注释版，适用于学习和理解，以及项目应用
+    └── typo.html            --- Demo/预览
 
 
 ### 二、TYPO.CSS 的设计和使用
