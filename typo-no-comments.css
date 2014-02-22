@@ -1,0 +1,235 @@
+html {
+    color: #444333;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+body, button, input, select, textarea {
+    font:500 0.875em/1.8 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+button, input {
+    *width: auto;
+    *overflow: visible;
+    line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    text-align: inherit;
+}
+fieldset, img {
+    border: 0;
+}
+img {
+    -ms-interpolation-mode: bicubic;    
+}
+iframe {
+    display: block;
+}
+blockquote {
+    font-family:Optima, Georgia, STSong, serif;
+    margin: 1em 0;
+    color:#999;
+    padding: 0.6em 1em;
+    background:#f8f8f8;
+    border-left: 0.4em solid #ddd;
+}
+blockquote blockquote {
+    padding: 0 0 0 1em;
+    margin-left: 2em;
+}
+blockquote p {
+    margin-bottom: 0;
+}
+acronym, abbr {
+    border-bottom: 1px dotted;
+    font-variant: normal;
+}
+abbr {
+    cursor: help;
+}
+del {
+    text-decoration: line-through;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: 400;
+}
+ul, ol {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+
+q:before, q:after {
+    content: '';
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: text-top\9;
+}
+:root sub, :root sup{
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+a:hover {
+    text-decoration: underline;
+}
+ins, a {
+    text-decoration: none;
+}
+
+u, .typo-u {
+    text-decoration: underline;
+}
+mark {
+    background: #fffdd1;
+}
+pre, code {
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre {
+    background: #f8f8f8;
+    border:1px solid #ddd;
+    padding: 1em 1.5em;
+}
+hr{
+    border:none;
+    border-bottom:1px solid #cfcfcf;
+    margin-bottom:10px;
+    *color:pink;*filter:chroma(color=pink);
+    height:10px;
+    *margin:-7px 0 2px;
+}
+small, .typo-small, 
+figcaption {
+    font-size: 0.9em;
+    color: #888;
+}
+[draggable=true] {
+    cursor: move;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both
+}
+.clearfix {
+    zoom: 1
+}
+.textwrap, .textwrap td, .textwrap th{
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.textwrap-table{
+    table-layout:fixed;
+}
+.serif{font-family:Palatino, Hiragino Mincho ProN W3, Optima, STSong, Georgia, serif;}
+.typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
+.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
+    margin-bottom: 1.2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    *font-weight: 800;
+    font-family: Helvetica Neue, Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+    color:#333;
+}
+.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
+.typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
+    margin-bottom: 0.4em;
+    line-height: 1.5;
+}
+.typo h1, .typo-h1 {
+    font-size: 1.8em;
+}
+.typo h2, .typo-h2 {
+    font-size: 1.6em;
+}
+.typo h3, .typo-h3 {
+    font-size: 1.4em;
+}
+.typo h4, .typo-h4 {
+    font-size: 1.2em;
+}
+.typo h5, .typo h6, .typo-h5, .typo-h6 {
+    font-size: 1em;
+}
+.typo ul, .typo-ul {
+    margin-left: 1.3em;
+    list-style: disc;
+}
+.typo ol, .typo-ol {
+    list-style: decimal;
+    margin-left: 1.9em;
+}
+.typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
+}
+.typo li ul, .typo-ul ul, .typo-ol ul {
+    list-style: circle;
+}
+.typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption{
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+    color:#666;
+}
+.typo table th, .typo-table th {
+    background: #fbfbfb;
+}
+.typo table thead th, .typo-table thead th {
+    background: #f1f1f1;
+}
+.typo table caption {
+    border-bottom:none;
+}
+.typo-input, .typo-textarea{
+    -webkit-appearance:none;
+    border-radius:0;
+}
+::-moz-selection {
+    background:#08c;
+    color:#fff;
+}
+::selection {
+    background:#08c;
+    color:#fff;
+}
+.typo-em, .typo em, legend, caption {font-weight: 700;}
