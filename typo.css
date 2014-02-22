@@ -198,6 +198,11 @@ figcaption {
     color: #888;
 }
 
+/* 可拖动文件添加拖动手势 */
+[draggable=true] {
+    cursor: move;
+}
+
 .clearfix:before, .clearfix:after {
     content: "";
     display: table;
