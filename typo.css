@@ -10,6 +10,13 @@ html{
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
+html.borderbox *, html.borderbox *:before, html.borderbox *:after {
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section{
   margin:0;
@@ -337,4 +344,3 @@ h1, h2, h3, h4, h5, h6{
 
 /* Responsive images */
 .typo img{ max-width: 100%; }
-
