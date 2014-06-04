@@ -330,7 +330,6 @@ h1, h2, h3, h4, h5, h6{
   color:#fff;
 }
 
-/* TODO: 供着重号使用 */
 .typo-em, .typo em, legend, caption{
   color:#000;
   font-weight:inherit;
