@@ -170,12 +170,12 @@ u, .typo-u{
 
 /* 标记，类似于手写的荧光笔的作用 */
 mark{
-  background:#fffdd1;
+  background:#fffdd1;border-bottom:1px solid #ffedce;padding:3px 6px;margin:0 5px;
 }
 
 /* 代码片断 */
 pre, code{
-  font-family:"Courier New", Courier, monospace;
+  font-family:Courier, "Courier New", monospace;
   white-space:pre-wrap;
   word-wrap:break-word;
 }
