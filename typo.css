@@ -30,7 +30,7 @@ audio, canvas, video{
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea{
-  font:400 1em/1.8 Arial, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font:400 1em/1.8 Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
 /* 去除 IE6 input/button 多余的空白 */
