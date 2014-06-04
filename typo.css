@@ -2,11 +2,12 @@
 
 /* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html{
-  color:#444333;
+  color:#555;
   background:#fff;
   -webkit-text-size-adjust:100%;
   -ms-text-size-adjust:100%;
   text-rendering:optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
@@ -29,7 +30,7 @@ audio, canvas, video{
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea{
-  font:400 1em/1.8 Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font:400 1em/1.8 Arial, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
 /* 去除 IE6 input/button 多余的空白 */
@@ -74,23 +75,17 @@ iframe{
 }
 
 /* 块/段落引用 */
-blockquote{
-  font-family:Optima, Georgia, STSong, serif;
-  margin:1em 0;
-  color:#999;
-  padding:0.6em 1em;
-  background:#f8f8f8;
-  border-left:0.4em solid #ddd;
+blockquote {
+  position:relative;
+  margin: 1em 4em 1em 3em;
+  color: #999;
+  font-weight:300;
+  font-family:Avenir, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;;
+  border-left:1px solid #1abc9c;
+  padding-left:1em;
+  margin:1em 3em 1em 2em;
 }
 
-blockquote blockquote{
-  padding:0 0 0 1em;
-  margin-left:2em;
-}
-
-blockquote p{
-  margin-bottom:0;
-}
 
 /* Firefox 以外，元素没有下划线，需添加 */
 acronym, abbr{
@@ -204,6 +199,8 @@ figcaption{
   color:#888;
 }
 
+strong, b{font-weight:inherit;color:#000；}
+
 /* 可拖动文件添加拖动手势 */
 [draggable]{
   cursor:move;
@@ -233,7 +230,7 @@ figcaption{
 }
 
 /* 提供 serif 版本的字体设置 */
-.serif, h1, h2, h3, h4, h5, h6{ font-family:Palatino, Songti SC, Hiragino Mincho ProN W3, Optima, STSong, Georgia, serif; }
+.serif{ font-family:Palatino, Songti SC, Hiragino Mincho ProN W3, Optima, STSong, Georgia, serif; }
 
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
@@ -242,8 +239,9 @@ figcaption{
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-weight:900;
-  color:#333;
+  font-family:Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-weight:200;
+  color:#000;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */

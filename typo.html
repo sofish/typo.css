@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="description" content="Typo.css 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。作者：sofish Lin，基于 MIT License 协议开源。"/>
+  <meta name="viewport" content="width=device-width, minimal-ui">
   <link rel="stylesheet" href="./typo.css"/>
   <title>Typo.css - 中文网页重设与排版</title>
   <style>
     code{ color:#1abc9c; }
-    body{ width:90%; max-width: 960px;}
-    table th{ white-space:nowrap; }
+    html{background:#eee;}
+    body{ width:90%; max-width: 960px; background:#fff; margin:0 auto;}
 
     i.serif{text-transform:lowercase; color:#1abc9c;}
     :-moz-any(h1, h2, h3, h4, h5, h5) i.serif{text-transform: capitalize;}
+    i.serif:hover{color:inherit;}
 
-    #wrapper{ min-width:480px; padding:5% 8%; }
-    #tagline{ color:#999; font-size:1em; margin:-2em 0 2em; padding-bottom:2em; border-bottom:3px double #eee; }
+    #wrapper{ padding:5% 10%; }
+    #tagline{ color:#999; font-size:1em; margin:-2em 0 2em; padding-bottom:2em; border-bottom:3px double #f8f8f8; }
     #fork{ position:fixed; top:0; right:0; _position:absolute; }
     #table{ margin-bottom:2em; color:#888; }
   </style>
@@ -125,6 +127,7 @@
 <p>对于这些，<i class="serif">Typo.css</i> 排版项目的中文偏重注意点，都添加在附录中，详见：</p>
 <blockquote>
   <b>附录一</b>：<a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a>
+  <blockquote><b>附录一</b>：<a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a></blockquote>
 </blockquote>
 
 <p>目前已有像百姓网等全面使用 <i class="serif">Typo.css</i> 的项目，测试平台的覆盖，特别是在<abbr title="手机、平板电脑等移动平台">移动端</abbr>上还没有覆盖完主流平台，希望有能力的同学能加入测试行列，或者加入到 <i class="serif">Typo.css</i>
