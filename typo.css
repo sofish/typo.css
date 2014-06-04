@@ -147,9 +147,11 @@ sub{
 }
 
 /* 让链接在 hover 状态下显示下划线 */
-a:hover{
-  text-decoration:underline;
-}
+a{ color:#1abc9c; }
+a:hover{ text-decoration:underline; }
+
+.typo a{ border-bottom:1px solid #1abc9c; }
+.typo a:hover{ border-bottom-color:#555; color:#555; text-decoration:none; }
 
 /* 默认不显示下划线，保持页面简洁 */
 ins, a{

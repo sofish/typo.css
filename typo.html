@@ -2,14 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <meta name="description" content="TYPO.CSS 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。作者：sofish Lin，基于 MIT License 协议开源。"/>
+  <meta name="description" content="Typo.css 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。作者：sofish Lin，基于 MIT License 协议开源。"/>
   <link rel="stylesheet" href="./typo.css"/>
-  <title>TYPO.CSS - 中文网页重设与排版</title>
+  <title>Typo.css - 中文网页重设与排版</title>
   <style>
-    a{ color:#1abc9c; }
     code{ color:#080; }
     body{ width:90%; max-width: 960px;}
     table th{ white-space:nowrap; }
+
+    i.serif{text-transform:lowercase; color:#1abc9c;}
+    :-moz-any(h1, h2, h3, h4, h5, h5) i.serif{text-transform: capitalize;}
 
     #wrapper{ min-width:480px; padding:5% 8%; }
     #tagline{ color:#999; font-size:1em; margin:-2em 0 2em; padding-bottom:2em; border-bottom:3px double #eee; }
@@ -21,12 +23,12 @@
 
 <div id="wrapper" class="typo typo-selection">
 
-<h1>中文网页重设与排版：TYPO.CSS</h1><br/>
+<h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
 
 <h2 id="tagline" class="serif">一致化浏览器排版效果，构建最适合中文阅读的网页排版</h2>
 
 <ol id="table">
-  <li><a href="#section1">关于 TYPO.CSS</a></li>
+  <li><a href="#section1">关于 <i class="serif">Typo.css</i></a></li>
   <li><a href="#section2">排版实例</a>
     <ul>
       <li><a href="#section2-1">例1：论语学而篇第一</a></li>
@@ -35,22 +37,22 @@
   </li>
   <li><a href="#section3">附录</a>
     <ul>
-      <li><a href="#appendix1">TYPO.CSS 排版偏重点</a></li>
+      <li><a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a></li>
       <li><a href="#appendix2">开源许可</a></li>
     </ul>
   </li>
 </ol>
 
-<h2 id="section1">一、关于 TYPO.CSS</h2>
+<h2 id="section1">一、关于 <i class="serif">Typo.css</i></h2>
 
-<p><em>TYPO.CSS</em> 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。</p>
+<p><i class="serif">Typo.css</i> 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。</p>
 <h4>现状和如何去做：</h4>
 
-<p>排版是一个麻烦的问题，需要精心设计，而这个设计却是常被视觉设计师所忽略的。前端工程师更常看到这样的问题，但不便变更。因为在多个 OS 中的不同浏览器渲染不同，改动需要多的时间做回归测试，所以改变变得更困难。而像我们一般使用的
-  Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。TYPO.CSS 要做的就是解决中文排版的问题。</p>
+<p>排版是一个麻烦的问题 <sup><a href="#appendix1"># 附录一</a></sup>，需要精心设计，而这个设计却是常被视觉设计师所忽略的。前端工程师更常看到这样的问题，但不便变更。因为在多个 OS 中的不同浏览器渲染不同，改动需要多的时间做回归测试，所以改变变得更困难。而像我们一般使用的
+  Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。<i class="serif">Typo.css</i> 要做的就是解决中文排版的问题。</p>
 
-<p><strong>TYPO.CSS 测试于如下平台：</strong></p>
-<table summary="TYPO.CSS 的测试平台列表">
+<p><strong><i class="serif">Typo.css</i> 测试于如下平台：</strong></p>
+<table summary="Typo.css 的测试平台列表">
   <thead>
   <tr>
     <th>OS/浏览器</th>
@@ -115,21 +117,21 @@
 <h4>中文排版的重点和难点</h4>
 
 <p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>。在 HTML4 中，着重号标签（<code>&lt;u&gt;</code>）已经被放弃，而
-  HTML5 被<a href="http://html5doctor.com/u-element/">重新提起</a>。TYPO.CSS 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
+  HTML5 被<a href="http://html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i> 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
 <ol>
   <li>语义：语义对应的用法和样式是否与中文排版一致</li>
   <li>表现：在各浏览器中的字体、大小和缩放是否如排版预期</li>
 </ol>
-<p>对于这些，TYPO.CSS 排版项目的中文偏重注意点，都添加在附录中，详见：</p>
+<p>对于这些，<i class="serif">Typo.css</i> 排版项目的中文偏重注意点，都添加在附录中，详见：</p>
 <blockquote>
-  <b>附录一</b>：<a href="#appendix1">TYPO.CSS 排版偏重点</a>
+  <b>附录一</b>：<a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a>
 </blockquote>
 
-<p>目前仍处于 alpha 开发阶段，测试平台的覆盖，特别是在<abbr title="手机、平板电脑等移动平台">移动端</abbr>上还没有覆盖完主流平台，希望有能力的同学能加入测试行列，或者加入到 TYPO.CSS
-  的开发。加入方法：<a href="https://github.com/sofish/typo.css">参与 TYPO.CSS 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a
-    href="https://github.com/sofish/typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of TYPO.CSS"
+<p>目前已有像百姓网等全面使用 <i class="serif">Typo.css</i> 的项目，测试平台的覆盖，特别是在<abbr title="手机、平板电脑等移动平台">移动端</abbr>上还没有覆盖完主流平台，希望有能力的同学能加入测试行列，或者加入到 <i class="serif">Typo.css</i>
+  的开发。加入方法：<a href="https://github.com/sofish/Typo.css">参与 <i class="serif">Typo.css</i> 开发</a>。如有批评、建议和意见，也随时欢迎给在 Github 直接提 <a
+    href="https://github.com/sofish/Typo.css/issues">issues</a>，或给<abbr title="Sofish Lin, author of Typo.css"
                                                                         role="author">我</abbr>发<a
-    href="mailto:sofish@163.com">邮件</a>。</p>
+    href="mailto:sofish@icloud.com">邮件</a>。</p>
 
 
 <h2 id="section2">二、排版实例：</h2>
@@ -149,44 +151,23 @@
 <h4>本篇引语</h4>
 
 <p>
-  《学而》是《论语》第一篇的篇名。《论语》中各篇一般都是以第一章的前二三个字作为该篇的篇名。《学而》一篇包括16章，内容涉及诸多方面。其中重点是“吾日三省吾身”；“节用而爱人，使民以时”；“礼之用，和为贵”以及仁、孝、信等道德范畴。 </p>
+  《学而》是《论语》第一篇的篇名。《论语》中各篇一般都是以第一章的前二三个字作为该篇的篇名。《学而》一篇包括16章，内容涉及诸多方面。其中重点是「吾日三省吾身」；「节用而爱人，使民以时」；「礼之用，和为贵」以及仁、孝、信等道德范畴。 </p>
 
 <h4>原文</h4>
 
-<p>子曰<sup><a href="#note1">[1]</a></sup>：“学<sup><a href="#note2">[2]</a></sup>而时习<sup><a href="#note3">[3]</a></sup>之，不亦说<sup><a
-  href="#note4">[4]</a></sup>乎？有朋<sup><a href="#note5">[5]</a></sup>自远方来，不亦乐<sup><a
-  href="#note6">[6]</a></sup>乎？人不知<sup><a href="#note7">[7]</a></sup>，而不愠<sup><a href="#note8">[8]</a></sup>，不亦君子<sup><a
-  href="#note9">[9]</a></sup>乎？” </p>
-
-<h4>注释</h4>
-
-<p>
-  <small>
-    <span id="note1">[1]</span> 子：中国古代对于有地位、有学问的男子的尊称，有时也泛称男子。《论语》书中“子曰”的子，都是指孔子而言。<br/>
-    <span id="note2">[2]</span> 学：孔子在这里所讲的“学”，主要是指学习西周的礼、乐、诗、书等传统文化典籍。 <br/>
-    <span id="note3">[3]</span>
-    时习：在周秦时代，“时”字用作副词，意为“在一定的时候”或者“在适当的时候”。但朱熹在《论语集注》一书中把“时”解释为“时常”。“习”，指演习礼、乐；复习诗、书。也含有温习、实习、练习的意思。 <br/>
-    <span id="note4">[4]</span> 说：音ｙｕè，同悦，愉快、高兴的意思。 <br/>
-    <span id="note5">[5]</span> 有朋：一本作“友朋”。旧注说，“同门曰朋”，即同在一位老师门下学习的叫朋，也就是志同道合的人。 <br/>
-    <span id="note6">[6]</span> 乐：与说有所区别。旧注说，悦在内心，乐则见于外。 <br/>
-    <span id="note7">[7]</span> 人不知：此句不完整，没有说出人不知道什么。缺少宾语。一般而言，知，是了解的意思。人不知，是说别人不了解自己。 <br/>
-    <span id="note8">[8]</span> 愠：音ｙùｎ，恼怒，怨恨。 <br/>
-    <span id="note9">[9]</span> 君子：《论语》书中的君子，有时指有德者，有时指有位者。此处指孔子理想中具有高尚人格的人。
-  </small>
-</p>
+<p>子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」 </p>
 
 <h4>译文</h4>
 
-<p>孔子说：“学了又时常温习和练习，不是很愉快吗？有志同道合的人从远方来，不是很令人高兴的吗？人家不了解我，我也不怨恨、恼怒，不也是一个有德的君子吗？” </p>
+<p>孔子说：「学了又时常温习和练习，不是很愉快吗？有志同道合的人从远方来，不是很令人高兴的吗？人家不了解我，我也不怨恨、恼怒，不也是一个有德的君子吗？」 </p>
 
 <h4>评析</h4>
 
-<p>宋代著名学者<u class="typo-u">朱熹</u>对此章评价极高，说它是“入道之门，积德之基”。本章这三句话是人们非常熟悉的。历来的解释都是：学了以后，又时常温习和练习，不也高兴吗等等。三句话，一句一个意思，前后句子也没有什么连贯性。但也有人认为这样解释不符合原义，指出这里的“学”不是指学习，而是指学说或主张；“时”不能解为时常，而是时代或社会的意思，“习”不是温习，而是使用，引申为采用。而且，这三句话不是孤立的，而是前后相互连贯的。这三句的意思是：自己的学说，要是被社会采用了，那就太高兴了；退一步说，要是没有被社会所采用，可是很多朋友赞同<abbr
+<p>宋代著名学者<u class="typo-u">朱熹</u>对此章评价极高，说它是「入道之门，积德之基」。本章这三句话是人们非常熟悉的。历来的解释都是：学了以后，又时常温习和练习，不也高兴吗等等。三句话，一句一个意思，前后句子也没有什么连贯性。但也有人认为这样解释不符合原义，指出这里的「学」不是指学习，而是指学说或主张；「时」不能解为时常，而是时代或社会的意思，「习」不是温习，而是使用，引申为采用。而且，这三句话不是孤立的，而是前后相互连贯的。这三句的意思是：自己的学说，要是被社会采用了，那就太高兴了；退一步说，要是没有被社会所采用，可是很多朋友赞同<abbr
   title="张燕婴">我</abbr>的学说，纷纷到我这里来讨论问题，我也感到快乐；再退一步说，即使社会不采用，人们也不理解我，我也不怨恨，这样做，不也就是君子吗？（见《齐鲁学刊》1986年第6期文）这种解释可以自圆其说，而且也有一定的道理，供读者在理解本章内容时参考。
 </p>
 
-<p>
-  此外，在对“人不知，而不愠”一句的解释中，也有人认为，“人不知”的后面没有宾语，人家不知道什么呢？当时因为孔子有说话的特定环境，他不需要说出知道什么，别人就可以理解了，却给后人留下一个谜。有人说，这一句是接上一句说的，从远方来的朋友向我求教，我告诉他，他还不懂，我却不怨恨。这样，“人不知”就是“人家不知道我所讲述的”了。这样的解释似乎有些牵强。</p>
+<p>此外，在对「人不知，而不愠」一句的解释中，也有人认为，「人不知」的后面没有宾语，人家不知道什么呢？当时因为孔子有说话的特定环境，他不需要说出知道什么，别人就可以理解了，却给后人留下一个谜。有人说，这一句是接上一句说的，从远方来的朋友向我求教，我告诉他，他还不懂，我却不怨恨。这样，「人不知」就是「人家不知道我所讲述的」了。这样的解释似乎有些牵强。</p>
 
 <p>总之，本章提出以学习为乐事，做到人不知而不愠，反映出孔子学而不厌、诲人不倦、注重修养、严格要求自己的主张。这些思想主张在《论语》书中多处可见，有助于对第一章内容的深入了解。</p>
 
@@ -265,8 +246,8 @@ h5,h6{font-size:1em;}
 
 <h3 id="section3">三、附录</h3>
 
-<h5 id="appendix1">1、TYPO.CSS 排版偏重点</h5>
-<table summary="TYPO.CSS 排版偏重点">
+<h5 id="appendix1">1、<i class="serif">Typo.css</i> 排版偏重点</h5>
+<table summary="Typo.css 排版偏重点">
   <thead>
   <tr>
     <th>类型</th>
@@ -384,7 +365,7 @@ h5,h6{font-size:1em;}
     <th rowspan="4">加强类</th>
     <td>专名号</td>
     <td><code>.typo-u</code></td>
-    <td>由于 <code>u</code> 被 HTML4 放弃，在向后兼容上推荐使用 <code><u type="typo-u" …</code></td>
+    <td>由于 <code>u</code> 被 HTML4 放弃，在向后兼容上推荐使用 <code>&lt;typo-u</code></td>
   </tr>
   <tr>
     <td>着重符</td>
@@ -422,11 +403,11 @@ h5,h6{font-size:1em;}
 
 <h5 id="appendix2">2、开源许可</h5>
 
-<p>TYPO.CSS 基于 <a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
+<p><i class="serif">Typo.css</i> 基于 <a href="http://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
   href="http://typo.sofish.de/license.txt">license.txt</a> 即可。</p>
 </div>
 <!-- #wrapper -->
-<a href="https://github.com/sofish/typo.css" id="fork">
+<a href="https://github.com/sofish/Typo.css" id="fork">
   <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
 </a>
 
