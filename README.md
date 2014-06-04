@@ -2,7 +2,7 @@
 
 目标：一致化浏览器排版效果，构建最适合中文阅读的网页排版。包括桌面和移动平台。
 
-预览：[typo.css](http://typo.sofish.de)
+预览：[typo.css](http://typo.sofi.sh)
 
 ### 一、目录结构    
     .
@@ -23,7 +23,7 @@
 
 2、`class="typo"` 阅读内容排版
 
-在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofish.de](http://typo.sofish.de) 一样，让用户阅读起来更舒服。
+在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofi.sh](http://typo.sofi.sh) 一样，让用户阅读起来更舒服。
 
 在父容器在没有添加 `class="typo"` 的时候，可以使用 `class="typo-标签"`（如 `class="typo-ul"`）来实现像 `.typo > ul` 这样结构的样式。
  
