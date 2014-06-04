@@ -93,7 +93,7 @@ blockquote {
 }
 
 @media only screen and ( max-width:640px ){
-  blockquote{ margin:1em 2em 1em 1em; }
+  blockquote{ margin:1em 0; }
 }
 
 /* Firefox 以外，元素没有下划线，需添加 */
