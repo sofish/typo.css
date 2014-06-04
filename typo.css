@@ -29,7 +29,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-    font:500 0.875em/1.8 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font:400 1em/1.8 Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
 /* 去除 IE6 input/button 多余的空白 */
@@ -130,7 +130,6 @@ sub, sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
-    vertical-align: text-top\9;
 }
 :root sub, :root sup{
     vertical-align: baseline; /* for ie9 and other mordern browsers */
@@ -226,18 +225,16 @@ figcaption {
 }
 
 /* 提供 serif 版本的字体设置 */
-.serif{font-family:Palatino, Hiragino Mincho ProN W3, Optima, STSong, Georgia, serif;}
+.serif, h1, h2, h3, h4, h5, h6{font-family:Palatino, Songti SC, Hiragino Mincho ProN W3, Optima, STSong, Georgia, serif;}
 
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
-.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table {
-    margin-bottom: 1.2em;
+.typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table, blockquote{
+    margin-bottom: 1.8em;
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-weight: 500;
-    *font-weight: 800;
-    font-family: Helvetica Neue, Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+    font-weight: 900;
     color:#333;
 }
 
@@ -248,19 +245,19 @@ h1, h2, h3, h4, h5, h6{
     line-height: 1.5;
 }
 .typo h1, .typo-h1 {
-    font-size: 1.8em;
+    font-size: 2em;
 }
 .typo h2, .typo-h2 {
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 .typo h3, .typo-h3 {
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 .typo h4, .typo-h4 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 .typo h5, .typo h6, .typo-h5, .typo-h6 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 /* 在文章中，应该还原 ul 和 ol 的样式 */
@@ -314,4 +311,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* TODO: 供着重号使用 */
-.typo-em, .typo em, legend, caption {font-weight: 700;}
+.typo-em, .typo em, legend, caption {
+  color:#000;
+  font-weight: inherit;
+}
