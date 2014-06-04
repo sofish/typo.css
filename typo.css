@@ -84,7 +84,6 @@ iframe{
 /* 块/段落引用 */
 blockquote {
   position:relative;
-  margin: 1em 4em 1em 3em;
   color: #999;
   font-weight:300;
   font-family:Avenir, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;;
@@ -93,6 +92,9 @@ blockquote {
   margin:1em 3em 1em 2em;
 }
 
+@media only screen and ( max-width:640px ){
+  blockquote{ margin:1em 2em 1em 1em; }
+}
 
 /* Firefox 以外，元素没有下划线，需添加 */
 acronym, abbr{
