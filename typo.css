@@ -240,8 +240,8 @@ strong, b{font-weight:inherit;color:#000；}
   table-layout:fixed;
 }
 
-/* 提供 serif 版本的字体设置 */
-.serif{ font-family:Palatino, Songti SC, Hiragino Mincho ProN W3, Optima, STSong, Georgia, serif; }
+/* 提供 serif 版本的字体设置: iOS 下中文自动 fallback 到 sans-serif */
+.serif{ font-family:Palatino, Optima, Georgia, serif; }
 
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
