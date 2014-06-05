@@ -15,10 +15,11 @@
     :-moz-any(h1, h2, h3, h4, h5, h5) i.serif{text-transform: capitalize;}
     i.serif:hover{color:inherit;}
 
-    #wrapper{ padding:5% 10%; }
+    #wrapper{ padding:5% 10%; position:relative;}
     #tagline{ color:#999; font-size:1em; margin:-2em 0 2em; padding-bottom:2em; border-bottom:3px double #eee; }
-    #fork{ position:fixed; top:0; right:0; _position:absolute; }
     #table{ margin-bottom:2em; color:#888; }
+    #github{ position:absolute;top:1em;}
+    #github iframe{display:inline;margin-right:1em;}
 
     @media only screen and (max-width: 640px) {
       table{word-break:break-all;word-wrap:break-word;font-size:12px;}
@@ -29,6 +30,13 @@
   </style>
 </head>
 <body>
+
+<div id="github">
+  <iframe src="http://ghbtns.com/github-btn.html?user=sofish&repo=typo.css&type=watch&count=true"
+          allowtransparency="true" frameborder="0" scrolling="0" width="98" height="20"></iframe>
+  <iframe src="http://ghbtns.com/github-btn.html?user=sofish&type=follow&count=true"
+          allowtransparency="true" frameborder="0" scrolling="0" width="156" height="20"></iframe>
+</div>
 
 <div id="wrapper" class="typo typo-selection">
 
@@ -411,9 +419,6 @@ h5,h6{font-size:1em;}
   href="http://typo.sofi.sh/license.txt">license.txt</a> 即可。</p>
 </div>
 <!-- #wrapper -->
-<a href="https://github.com/sofish/Typo.css" id="fork">
-  <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-</a>
 
 </body>
 </html>
