@@ -86,7 +86,7 @@ blockquote {
   position:relative;
   color: #999;
   font-weight:300;
-  font-family:Avenir, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;;
+  font-family:Avenir, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
   border-left:1px solid #1abc9c;
   padding-left:1em;
   margin:1em 3em 1em 2em;
@@ -181,7 +181,7 @@ mark{
 
 /* 代码片断 */
 pre, code{
-  font-family:Courier, "Courier New", monospace;
+  font-family:Courier, 'Courier New', monospace;
   white-space:pre-wrap;
   word-wrap:break-word;
 }
@@ -250,7 +250,7 @@ strong, b{font-weight:inherit;color:#000；}
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family:Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-family:'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
   font-weight:200;
   color:#000;
 }
