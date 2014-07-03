@@ -55,13 +55,13 @@ input::-moz-focus-inner{
   border:0;
 }
 
-/* 去掉各Table  cell 的边距并让其边重合 */
+/* 去掉各Table cell 的边距并让其边重合 */
 table{
   border-collapse:collapse;
   border-spacing:0;
 }
 
-/* IE bug fixed: th 不继承 text-align*/
+/* IE bug fixed: th 不继承 text-align */
 th{
   text-align:inherit;
 }
@@ -139,7 +139,7 @@ sub, sup{
 }
 
 :root sub, :root sup{
-  vertical-align:baseline; /* for ie9 and other mordern browsers */
+  vertical-align:baseline; /* for ie9 and other modern browsers */
 }
 
 sup{
@@ -192,7 +192,7 @@ pre{
   padding:1em 1.5em;
 }
 
-/* 一致化 horizonal rule */
+/* 一致化 horizontal rule */
 hr{
   border:none;
   border-bottom:1px solid #cfcfcf;
@@ -210,7 +210,7 @@ figcaption{
   color:#888;
 }
 
-strong, b{font-weight:inherit;color:#000；}
+strong, b{font-weight:inherit;color:#000;}
 
 /* 可拖动文件添加拖动手势 */
 [draggable]{
@@ -223,11 +223,11 @@ strong, b{font-weight:inherit;color:#000；}
 }
 
 .clearfix:after{
-  clear:both
+  clear:both;
 }
 
 .clearfix{
-  zoom:1
+  zoom:1;
 }
 
 /* 强制文本换行 */
