@@ -135,7 +135,7 @@
 
 <h4>中文排版的重点和难点</h4>
 
-<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>。在 HTML4 中，着重号标签（<code>&lt;u&gt;</code>）已经被放弃，而
+<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>（例：这里<em class="typo-em">强调一下</em>）。在 HTML4 中，专名号标签（<code>&lt;u&gt;</code>）已经被放弃，而
   HTML5 被<a href="http://html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i> 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
 <ol>
   <li>语义：语义对应的用法和样式是否与中文排版一致</li>
@@ -355,7 +355,7 @@ h5,h6{font-size:1em;}
   <tr>
     <th rowspan="5">特殊符号</th>
     <td>着重号</td>
-    <td>在文字下加点（•）</td>
+    <td><em class="typo-em">在文字下加点</em></td>
     <td>在支持 <code>:after</code> 和 <code>:before</code> 的浏览器可以做渐进增强实现</td>
   </tr>
   <tr>
