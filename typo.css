@@ -211,7 +211,7 @@ figcaption{
   color:#888;
 }
 
-strong, b{font-weight:inherit;color:#000;}
+strong, b{font-weight:bold;color:#000;}
 
 /* 可拖动文件添加拖动手势 */
 [draggable]{
