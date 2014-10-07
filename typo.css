@@ -182,7 +182,7 @@ mark{
 
 /* 代码片断 */
 pre, code, pre tt{
-  font-family:Courier, 'Courier New', monospace;
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
 }
 
 pre{
