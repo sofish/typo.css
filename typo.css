@@ -37,7 +37,7 @@ audio, canvas, video{
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea{
-  font:400 1em/1.8 Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font:400 1em/1.8 Avenir, Hiragino Sans GB, Microsoft Yahei, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
 /* 去除 IE6 input/button 多余的空白 */
@@ -86,7 +86,7 @@ blockquote {
   position:relative;
   color: #999;
   font-weight:300;
-  font-family:Avenir, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;;
+  font-family:Avenir, Helvetica Neue, Hiragino Sans GB, Microsoft Yahei, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;;
   border-left:1px solid #1abc9c;
   padding-left:1em;
   margin:1em 3em 1em 2em;
@@ -250,7 +250,7 @@ strong, b{font-weight:inherit;color:#000；}
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family:Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-family:Helvetica Neue, Hiragino Sans GB, Microsoft Yahei, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
   font-weight:200;
   color:#000;
 }
