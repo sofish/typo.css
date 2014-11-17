@@ -8,26 +8,26 @@
   <title>Typo.css - 中文网页重设与排版</title>
   <style>
     code{ color:#1abc9c; }
-    html{background:#eee;}
+    html{ background:#eee; }
     body{ width:90%; max-width: 960px; background:#fff; margin:3em auto 0; padding-top:2em;border:1px solid #ddd;border-width:0 1px;}
 
-    i.serif{text-transform:lowercase; color:#1abc9c;}
-    :-moz-any(h1, h2, h3, h4, h5, h5) i.serif{text-transform: capitalize;}
-    i.serif:hover{color:inherit;}
+    i.serif{ text-transform:lowercase; color:#1abc9c; }
+    :-moz-any(h1, h2, h3, h4, h5, h5) i.serif{ text-transform: capitalize; }
+    i.serif:hover{ color:inherit; }
 
     #wrapper{ padding:5% 10%; position:relative;}
     #tagline{ color:#999; font-size:1em; margin:-2em 0 2em; padding-bottom:2em; border-bottom:3px double #eee; }
     #fork{ position:fixed; top:0; right:0; _position:absolute; }
     #table{ margin-bottom:2em; color:#888; }
     #github{ position:absolute;top:1em;}
-    #github iframe{display:inline;margin-right:1em;}
+    #github iframe{ display:inline;margin-right:1em; }
 
     @media only screen and (max-width: 640px) {
-      table{word-break:break-all;word-wrap:break-word;font-size:12px;}
+      table{ word-break:break-all;word-wrap:break-word;font-size:12px; }
       .typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption {
         padding: 0.5em;
       }
-      #fork{display:none;}
+      #fork{ display:none; }
     }
   </style>
 </head>
@@ -135,7 +135,7 @@
 
 <h4>中文排版的重点和难点</h4>
 
-<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>。在 HTML4 中，着重号标签（<code>&lt;u&gt;</code>）已经被放弃，而
+<p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>（例：这里<em class="typo-em">强调一下</em>）。在 HTML4 中，专名号标签（<code>&lt;u&gt;</code>）已经被放弃，而
   HTML5 被<a href="http://html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i> 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
 <ol>
   <li>语义：语义对应的用法和样式是否与中文排版一致</li>
@@ -355,7 +355,7 @@ h5,h6{font-size:1em;}
   <tr>
     <th rowspan="5">特殊符号</th>
     <td>着重号</td>
-    <td>在文字下加点（•）</td>
+    <td><em class="typo-em">在文字下加点</em></td>
     <td>在支持 <code>:after</code> 和 <code>:before</code> 的浏览器可以做渐进增强实现</td>
   </tr>
   <tr>
