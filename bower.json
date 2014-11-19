@@ -7,6 +7,13 @@
   "ignore": [
     "*.html"
   ],
-  "dependencies": {},
-  "devDependencies": {}
+  "homepage": "https://github.com/sofish/typo.css",
+  "authors": [
+    "sofish <happinesz@gmail.com>"
+  ],
+  "keywords": [
+    "排版",
+    "typography",
+    "normalize"
+  ]
 }
