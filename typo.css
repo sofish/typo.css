@@ -8,7 +8,7 @@ html{
   -ms-text-size-adjust:100%;
   text-rendering:optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; //webkit的好像没 grayscale 吧
+  -webkit-font-smoothing: antialiased; /*webkit的好像没 grayscale 吧*/
 }
 
 /* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
