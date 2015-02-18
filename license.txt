@@ -1,6 +1,6 @@
 TYPO.CSS - a better way to manage the typography of your Chinese-lang-base site.
 
-Copyright (C) 2012 Sofish Lin http://sofish.de
+Copyright (C) 2012 Sofish Lin http://typo.sofi.sh/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
