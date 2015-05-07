@@ -29,22 +29,11 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section{
 /* HTML5 媒体文件跟 img 保持一致 */
 audio, canvas, video{
   display:inline-block;
-  *display:inline;
-  *zoom:1;
 }
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea{
   font:400 1em/1.8 Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-}
-
-/* 去除 IE6 input/button 多余的空白 */
-button, input{
-  *width:auto;
-  *overflow:visible;
-
-  /* 让 input 和 button 一样高 */
-  line-height:normal;
 }
 
 button::-moz-focus-inner,
@@ -59,24 +48,9 @@ table{
   border-spacing:0;
 }
 
-/* IE bug fixed: th 不继承 text-align */
-th{
-  text-align:inherit;
-}
-
 /* 去除默认边框 */
 fieldset, img{
   border:0;
-}
-
-/* 解决 IE6-7 图片缩放锯齿问题 */
-img{
-  -ms-interpolation-mode:bicubic;
-}
-
-/* ie6 7 8(q) bug 显示为行内表现 */
-iframe{
-  display:block;
 }
 
 /* 块/段落引用 */
@@ -187,17 +161,15 @@ pre{
   border:1px solid #ddd;
   padding:1em 1.5em;
   display:block;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling:touch;
 }
 
 /* 一致化 horizontal rule */
 hr{
   border:none;
   border-bottom:1px solid #cfcfcf;
-  margin-bottom:10px;
-  *color:pink; *filter:chroma(color=pink);
+  margin-bottom:0.8em;
   height:10px;
-  *margin:-7px 0 2px;
 }
 
 /* 底部印刷体、版本等标记 */
@@ -244,20 +216,22 @@ strong, b{font-weight:bold;color:#000;}
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table, blockquote{
-  margin-bottom:1.8em;
+  margin-bottom: 1.2em
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: Lantinghei SC, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
-  font-weight:200;
+  font-family: Verdana, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+  font-weight:100;
   color:#000;
+  line-height:1.35;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6{
-  margin-bottom:0.4em;
-  line-height:1.5;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  line-height: 1.35;
 }
 
 .typo h1, .typo-h1{
@@ -292,8 +266,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .typo li ul, .typo li ol, .typo-ul ul, .typo-ul ol, .typo-ol ul, .typo-ol ol{
-  margin-top:0;
-  margin-bottom:0;
+  margin-bottom:0.8em;
   margin-left:2em;
 }
 
@@ -324,17 +297,6 @@ h1, h2, h3, h4, h5, h6{
 .typo-input, .typo-textarea{
   -webkit-appearance:none;
   border-radius:0;
-}
-
-/* 高亮选中 */
-::-moz-selection{
-  background:#08c;
-  color:#fff;
-}
-
-::selection{
-  background:#08c;
-  color:#fff;
 }
 
 .typo-em, .typo em, legend, caption{
