@@ -34,7 +34,7 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-  font: 400 1em/1.8 Pinghei, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+  font: 300 1em/1.8 Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
 }
 
 button::-moz-focus-inner,
@@ -59,7 +59,7 @@ blockquote {
   position: relative;
   color: #999;
   font-weight: 300;
-  font-family: Pinghei, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei';
+  font-family: Lantinghei SC, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei';
   border-left: 1px solid #1abc9c;
   padding-left: 1em;
   margin: 1em 3em 1em 2em;
