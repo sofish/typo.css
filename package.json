@@ -1,0 +1,23 @@
+{
+  "name": "typo.css",
+  "version": "2.1.2",
+  "description": "一致化浏览器排版效果，构建最适合中文阅读的网页排版",
+  "main": "typo.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sofish/typo.css.git"
+  },
+  "keywords": [
+    "typograhpy",
+    "中文"
+  ],
+  "author": "sofish <happinesz@gmail.com> (http://sofi.sh/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sofish/typo.css/issues"
+  },
+  "homepage": "https://github.com/sofish/typo.css"
+}
