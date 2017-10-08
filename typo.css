@@ -124,11 +124,11 @@ sub {
   bottom: -0.25em;
 }
 
-/* 让链接在 hover 状态下显示下划线 */
 a {
   color: #1abc9c;
 }
 
+/* 让链接在 hover 状态下显示下划线 */
 a:hover {
   text-decoration: underline;
 }
