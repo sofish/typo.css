@@ -74,6 +74,7 @@ blockquote {
 acronym, abbr {
   border-bottom: 1px dotted;
   font-variant: normal;
+  text-decoration: none;
 }
 
 /* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
