@@ -34,7 +34,7 @@
 (1) 专名号：使用标签 `<u>` 或者 `.typo-u` <br />
 (2) 着重号：使用 class `.typo-em` <br />
 (3) 清理浮动：与一般 reset.css 保持一致 `.clearfix` <br />
-(4) 强制换行：添加 `.textwrap` 到文本所在的容器，如果是 `table` 测还需要 `.textwrap-table` <br />
+(4) 强制换行：添加 `.textwrap` 到文本所在的容器，如果是 `table` 则还需要 `.textwrap-table` <br />
 (5) 衬线字体：添加 `.serif` <br />
 (6) 创建 border-box：在 html 中添加 `.borderbox` [#why](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
 
