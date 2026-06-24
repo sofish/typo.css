@@ -1,0 +1,50 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Table Styles (表格排版)
+   从 typography.css 拆分，独立管理
+   ========================================================================== */
+
+/* ── 表格单元格 ── */
+.typo table th, .typo table td,
+.typo-table th, .typo-table td,
+.typo table caption {
+  border:  var(--typo-border-width) solid var(--typo-color-border);
+  padding: var(--typo-table-cell-padding, 0.5em 1em);
+  color:   var(--typo-color-text);
+  vertical-align: top;
+}
+
+/* ── 表头 ── */
+.typo table th, .typo-table th {
+  background: var(--typo-color-bg-table-head);
+  font-weight: 700;
+  text-align: start;
+}
+
+.typo table thead th, .typo-table thead th {
+  background: var(--typo-color-bg-table-thead);
+}
+
+/* ── 标题 ── */
+.typo table caption {
+  border-bottom:  none;
+  font-weight:    600;
+  caption-side:   top;
+  padding-bottom: var(--typo-space-xs);
+}
+
+/* ── 斑马纹（可选） ── */
+.typo table.striped tbody tr:nth-child(even),
+.typo-table.striped tbody tr:nth-child(even) {
+  background: var(--typo-color-bg-table-head);
+}
+
+/* ── 响应式表格（窄屏横向滚动） ── */
+@media (max-width: 640px) {
+  .typo table.responsive,
+  .typo-table.responsive {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+}

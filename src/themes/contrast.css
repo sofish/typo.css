@@ -1,0 +1,50 @@
+/* ==========================================================================
+   typo.css v3.0.0 — High Contrast Theme
+   通过 prefers-contrast: more 自动激活 或 .typo-contrast class
+   WCAG AAA 级对比度（≥7:1）
+   ========================================================================== */
+
+@media (prefers-contrast: more) {
+  :root:not([data-typo-theme="sepia"]) {
+    --typo-color-text:         #000;
+    --typo-color-text-strong:  #000;
+    --typo-color-text-muted:   #333;
+    --typo-color-text-quiet:   #333;
+    --typo-color-bg:           #fff;
+    --typo-color-bg-code:      #f0f0f0;
+    --typo-color-bg-table-head:#e8e8e8;
+    --typo-color-bg-table-thead:#ddd;
+    --typo-color-bg-mark:      #ff0;
+    --typo-color-border:       #000;
+    --typo-color-border-light: #666;
+    --typo-color-border-mark:  #000;
+    --typo-color-accent:       #05c;
+    --typo-color-accent-hover: #039;
+    --typo-shadow-sm:          none;
+    --typo-shadow-md:          none;
+
+    color-scheme: light;
+  }
+}
+
+.typo-contrast,
+[data-typo-theme="contrast"] {
+  --typo-color-text:         #000;
+  --typo-color-text-strong:  #000;
+  --typo-color-text-muted:   #333;
+  --typo-color-text-quiet:   #333;
+  --typo-color-bg:           #fff;
+  --typo-color-bg-code:      #f0f0f0;
+  --typo-color-bg-table-head:#e8e8e8;
+  --typo-color-bg-table-thead:#ddd;
+  --typo-color-bg-mark:      #ff0;
+  --typo-color-border:       #000;
+  --typo-color-border-light: #666;
+  --typo-color-border-mark:  #000;
+  --typo-color-accent:       #05c;
+  --typo-color-accent-hover: #039;
+  --typo-shadow-sm:          none;
+  --typo-shadow-md:          none;
+
+  color-scheme: light;
+}

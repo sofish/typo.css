@@ -1,0 +1,26 @@
+/* ==========================================================================
+   typo.css v3.0.1 — Reduced Data Preference
+   通过 @media (prefers-reduced-data: reduce) 自动激活
+   在流量敏感环境下禁用非必要的网络/渲染开销
+   参考: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-data
+   ========================================================================== */
+
+@media (prefers-reduced-data: reduce) {
+  /* 关闭字体平滑（减少 GPU 合成开销） */
+  html {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    text-rendering: auto;
+  }
+
+  /* 禁用过渡动画 */
+  .typo,
+  .typo * {
+    transition-duration: 0s !important;
+  }
+
+  /* 保持基本可用性：确保链接可见 */
+  .typo a {
+    text-decoration: underline;
+  }
+}

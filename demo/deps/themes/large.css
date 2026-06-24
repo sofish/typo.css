@@ -1,0 +1,36 @@
+/* ==========================================================================
+   typo.css v3.0.1 — Large Print Variant（大字体可访问变体）
+   通过 .typo-large class 手动激活，适合低视力用户
+   所有字体增大约 25%，同时缩放间距与阴影
+   ========================================================================== */
+
+.typo-large {
+  --typo-font-size-base:     1.25rem;
+  --typo-font-size-small:    clamp(0.95rem, 2.2vw, 1.1rem);
+  --typo-font-size-code:     1.05rem;
+  --typo-font-size-h1:       clamp(1.85rem, 4.5vw, 2.5rem);
+  --typo-font-size-h2:       clamp(1.65rem, 4vw, 2.2rem);
+  --typo-font-size-h3:       clamp(1.45rem, 3.5vw, 1.85rem);
+  --typo-font-size-h4:       clamp(1.3rem, 3vw, 1.55rem);
+  --typo-font-size-h5:       clamp(1.15rem, 2.5vw, 1.4rem);
+  --typo-font-size-h6:       clamp(1.05rem, 2vw, 1.2rem);
+  --typo-line-height-base:   2;
+  --typo-line-height-heading:1.5;
+
+  /* 间距同比缩放 */
+  --typo-space-xxs: 0.3em;
+  --typo-space-xs:  0.6em;
+  --typo-space-sm:  1em;
+  --typo-space-md:  1.2em;
+  --typo-space-lg:  1.5em;
+  --typo-space-xl:  1.8em;
+  --typo-space-2xl: 2.4em;
+
+  /* 边框加粗更可见 */
+  --typo-border-radius: 6px;
+  --typo-border-width:  2px;
+
+  /* 阴影增强深度感知 */
+  --typo-shadow-sm: 0 2px 4px rgb(0 0 0 / 10%);
+  --typo-shadow-md: 0 4px 8px rgb(0 0 0 / 15%);
+}

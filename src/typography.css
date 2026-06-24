@@ -1,0 +1,243 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Typography Layer (排版层)
+   在 .typo 容器内激活完整排版风格
+   继承 CSS 变量，支持亮色/暗色/护眼自动切换
+   代码与表格样式已拆分至 code.css / table.css
+   ========================================================================== */
+
+/* ── 容器：块间距 ── */
+.typo p,
+.typo pre,
+.typo ul,
+.typo ol,
+.typo dl,
+.typo form,
+.typo hr,
+.typo table,
+.typo blockquote {
+  margin-bottom: var(--typo-space-lg);
+}
+
+.typo-p, .typo-pre, .typo-ul, .typo-ol,
+.typo-dl, .typo-form, .typo-hr, .typo-table,
+blockquote {
+  margin-bottom: var(--typo-space-lg);
+}
+
+/* ── 标题：紧贴内容 ── */
+.typo h1, .typo h2, .typo h3,
+.typo h4, .typo h5, .typo h6,
+.typo-h1, .typo-h2, .typo-h3,
+.typo-h4, .typo-h5, .typo-h6 {
+  margin-top: var(--typo-space-lg);
+  margin-bottom: var(--typo-space-sm);
+  line-height: var(--typo-line-height-heading);
+}
+
+.typo h1, .typo-h1 { font-size: var(--typo-font-size-h1); }
+.typo h2, .typo-h2 { font-size: var(--typo-font-size-h2); }
+.typo h3, .typo-h3 { font-size: var(--typo-font-size-h3); }
+.typo h4, .typo-h4 { font-size: var(--typo-font-size-h4); }
+
+.typo h5, .typo-h5 { font-size: var(--typo-font-size-h5); }
+
+.typo h6, .typo-h6 { font-size: var(--typo-font-size-h6); }
+
+/* ── 列表还原 ── */
+.typo ul, .typo-ul {
+  margin-inline-start: 1.3em;
+  list-style: disc;
+}
+
+.typo ol, .typo-ol {
+  list-style: decimal;
+  margin-inline-start: 1.9em;
+}
+
+.typo li ul, .typo li ol,
+.typo-ul ul, .typo-ul ol,
+.typo-ol ul, .typo-ol ol {
+  margin-bottom: var(--typo-space-sm);
+  margin-inline-start: var(--typo-space-2xl);
+}
+
+.typo li ul, .typo-ul ul, .typo-ol ul {
+  list-style: circle;
+}
+
+/* ── 定义列表 ── */
+.typo dl dt {
+  font-weight: 700;
+  color: var(--typo-color-text-strong);
+  margin-top: var(--typo-space-md);
+}
+
+.typo dl dd {
+  margin-bottom: var(--typo-space-sm);
+  margin-inline-start: var(--typo-space-2xl);
+  color: var(--typo-color-text);
+}
+
+/* ── 引用块 ── */
+.typo blockquote {
+  position: relative;
+  color: var(--typo-color-text-quiet);
+  font-weight: 400;
+  border-inline-start: var(--typo-blockquote-border-width, 3px) solid var(--typo-color-accent);
+  padding-inline-start: var(--typo-space-md);
+  margin-block: var(--typo-space-md);
+  margin-inline: var(--typo-space-2xl) 0;
+  background: var(--typo-color-bg-code);
+  border-radius: 0 var(--typo-border-radius) var(--typo-border-radius) 0;
+}
+
+@media (max-width: 640px) {
+  .typo blockquote {
+    margin-inline: 0;
+  }
+}
+
+/* ── 水平线 ── */
+.typo hr {
+  border: none;
+  border-bottom: var(--typo-border-width) solid var(--typo-color-border-light);
+  margin-block: var(--typo-space-lg);
+}
+
+/* ── 缩写（全局 + .typo 作用域） ── */
+abbr[title] {
+  border-bottom: var(--typo-border-width) dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+.typo abbr[title] {
+  border-bottom-color: var(--typo-color-accent);
+}
+
+/* ── 标记（荧光笔，受 .typo 作用域限制） ── */
+.typo mark {
+  background: var(--typo-color-bg-mark);
+  border-bottom: var(--typo-border-width) solid var(--typo-color-border-mark);
+  padding: var(--typo-mark-padding, 2px);
+  margin: var(--typo-mark-margin, 0 5px);
+  border-radius: var(--typo-mark-radius, 2px);
+}
+
+/* ── 专名号（在排版环境内生效） ── */
+.typo u, .typo .typo-u {
+  text-decoration: underline;
+  text-underline-offset: var(--typo-underline-offset, 0.2em);
+}
+
+/* ── 链接在排版中以下划线增强 ── */
+.typo a {
+  color: var(--typo-color-accent);
+  border-bottom: var(--typo-border-width) solid var(--typo-color-accent);
+  transition: color var(--typo-transition-fast),
+              border-color var(--typo-transition-fast);
+}
+
+.typo a:hover {
+  color: var(--typo-color-accent-hover);
+  border-bottom-color: var(--typo-color-accent-hover);
+  text-decoration: none;
+}
+
+/* ── 着重号 ── */
+.typo-em {
+  position: relative;
+  font-style: normal;
+}
+
+.typo-em::after {
+  position: absolute;
+  top: var(--typo-emphasis-top, 0.65em);
+  inset-inline-start: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・";
+  color: var(--typo-color-accent);
+}
+
+/* ── 图片响应式 ── */
+.typo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--typo-border-radius);
+}
+
+/* ── 去 webkit 默认样式 ── */
+.typo-input, .typo-textarea {
+  appearance: none;
+  border-radius: var(--typo-border-radius);
+  border: var(--typo-border-width) solid var(--typo-color-border);
+  padding: var(--typo-space-xs) var(--typo-space-sm);
+  font-family: var(--typo-font-sans);
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.typo-input:focus-visible, .typo-textarea:focus-visible {
+  outline: 2px solid var(--typo-color-accent);
+  outline-offset: 2px;
+}
+
+/* 鼠标点击不显示焦点环（键盘导航仍可见） */
+.typo-input:focus:not(:focus-visible),
+.typo-textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── strong/em 在排版环境中 ── */
+.typo strong, .typo b {
+  color: var(--typo-color-text-strong);
+}
+
+.typo em, .typo i {
+  font-style: italic;
+}
+
+/* ── cite & dfn（在排版环境内生效） ── */
+.typo cite, .typo dfn {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ── 首段特殊样式 ── */
+.typo-first::first-letter {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--typo-color-accent);
+  float: inline-start;
+  margin-inline-end: 0.2em;
+  line-height: 1;
+}
+
+/* ── 移动端优化（≤640px） ── */
+@media (max-width: 640px) {
+  /* 标题：减小字号防止溢出 */
+  .typo h1, .typo-h1 { font-size: clamp(1.3rem, 5vw, var(--typo-font-size-h1)); }
+  .typo h2, .typo-h2 { font-size: clamp(1.15rem, 4.5vw, var(--typo-font-size-h2)); }
+  .typo h3, .typo-h3 { font-size: clamp(1.05rem, 4vw, var(--typo-font-size-h3)); }
+
+  /* 列表：减小缩进 */
+  .typo ul, .typo-ul, .typo ol, .typo-ol {
+    margin-inline-start: 1em;
+  }
+  .typo li ul, .typo li ol,
+  .typo-ul ul, .typo-ul ol,
+  .typo-ol ul, .typo-ol ol {
+    margin-inline-start: 1.5em;
+  }
+
+  /* 代码块：减小内边距 */
+  .typo pre, .typo-pre {
+    padding: 0.8em 1em;
+    font-size: 0.85rem;
+  }
+
+  /* 表格：全宽 */
+  .typo table { width: 100%; }
+}

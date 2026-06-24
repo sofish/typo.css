@@ -1,1 +1,8 @@
-.idea
+node_modules/
+dist/
+*.min.css
+*.min.css.map
+.npm/
+.DS_Store
+test-results.xml
+test/baseline/

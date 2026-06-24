@@ -1,0 +1,52 @@
+/* ==========================================================================
+   typo.css v3.0.1 — Sepia Theme（护眼模式）
+   通过 @media (prefers-color-scheme: light) 自动激活
+   或 .typo-sepia class 手动激活，适合长时间阅读
+   ========================================================================== */
+
+/* 系统亮色模式下自动激活护眼（用户未指定其他主题时） */
+@media (prefers-color-scheme: light) {
+  :root:not([data-typo-theme]):not([data-typo-theme="dark"]):not([data-typo-theme="contrast"]):not([data-typo-theme="large"]) {
+    --typo-color-text:         #5b4636;
+    --typo-color-text-strong:  #3e2e1f;
+    --typo-color-text-muted:   #8b7355;
+    --typo-color-text-quiet:   #9a8a70;
+    --typo-color-bg:           #f4ecd8;
+    --typo-color-bg-code:      #efe0c5;
+    --typo-color-bg-table-head:#ece0c8;
+    --typo-color-bg-table-thead:#e6d8bc;
+    --typo-color-bg-mark:      #e8d9a0;
+    --typo-color-border:       #d4c5a0;
+    --typo-color-border-light: #d0bf98;
+    --typo-color-border-mark:  #c8a840;
+    --typo-color-accent:       #8b4513;
+    --typo-color-accent-hover: #a0522d;
+    --typo-shadow-sm:          0 1px 2px rgb(0 0 0 / 8%);
+    --typo-shadow-md:          0 2px 4px rgb(0 0 0 / 12%);
+
+    color-scheme: light;
+  }
+}
+
+/* 手动激活（覆盖自动检测） */
+.typo-sepia,
+[data-typo-theme="sepia"] {
+  --typo-color-text:         #5b4636;
+  --typo-color-text-strong:  #3e2e1f;
+  --typo-color-text-muted:   #8b7355;
+  --typo-color-text-quiet:   #9a8a70;
+  --typo-color-bg:           #f4ecd8;
+  --typo-color-bg-code:      #efe0c5;
+  --typo-color-bg-table-head:#ece0c8;
+  --typo-color-bg-table-thead:#e6d8bc;
+  --typo-color-bg-mark:      #e8d9a0;
+  --typo-color-border:       #d4c5a0;
+  --typo-color-border-light: #d0bf98;
+  --typo-color-border-mark:  #c8a840;
+  --typo-color-accent:       #8b4513;
+  --typo-color-accent-hover: #a0522d;
+  --typo-shadow-sm:          0 1px 2px rgb(0 0 0 / 8%);
+  --typo-shadow-md:          0 2px 4px rgb(0 0 0 / 12%);
+
+  color-scheme: light;
+}

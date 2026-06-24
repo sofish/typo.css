@@ -1,0 +1,42 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Code Blocks (代码排版)
+   从 typography.css 拆分，独立管理
+   ========================================================================== */
+
+/* ── 代码字体 ── */
+.typo pre, .typo code, .typo pre tt,
+.typo-pre, .typo-code {
+  font-family: var(--typo-font-mono);
+  font-size:   var(--typo-font-size-code, 0.9rem);
+}
+
+/* ── 行内代码 ── */
+.typo code, .typo-code {
+  background:     var(--typo-color-bg-code);
+  padding:        var(--typo-code-padding, 0.15em 0.4em);
+  border-radius:  var(--typo-border-radius);
+  color:          var(--typo-color-accent);
+  overflow-wrap:  break-word;
+}
+
+/* ── 代码块 ── */
+.typo pre, .typo-pre {
+  background:                var(--typo-color-bg-code);
+  border:                    var(--typo-border-width) solid var(--typo-color-border);
+  padding:                   var(--typo-code-block-padding, 1em 1.5em);
+  border-radius:             var(--typo-border-radius);
+  overflow-x:                auto;
+  -webkit-overflow-scrolling: touch;
+  white-space:               pre-wrap;
+  overflow-wrap:             break-word;
+  tab-size:                  var(--typo-code-tab-size, 2);
+}
+
+/* 代码块中的行内代码还原 */
+.typo pre code, .typo pre .typo-code {
+  background:    transparent;
+  padding:       0;
+  color:         inherit;
+  border-radius: 0;
+  font-size:     inherit;
+}

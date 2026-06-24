@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typo.css v3 Demo</title>
+<link rel="stylesheet" href="../dist/typo.css">
+<link rel="stylesheet" href="../dist/themes/dark.css">
+<link rel="stylesheet" href="../dist/themes/sepia.css">
+<style>
+  body { max-width: 720px; margin: 2em auto; padding: 1em; }
+  .test-section { margin: 2em 0; padding: 1em; border: 1px solid #ddd; border-radius: 4px; }
+</style>
+</head>
+<body class="typo">
+
+<h1>Typo.css v3 — Visual Regression Test</h1>
+
+<div class="test-section">
+  <h2>Heading Hierarchy</h2>
+  <h1>H1: 中文网页重设与排版</h1>
+  <h2>H2: 构建最适合中文阅读的网页排版</h2>
+  <h3>H3: 一致化浏览器排版效果</h3>
+  <h4>H4: 支持桌面和移动平台</h4>
+  <h5>H5: 模块化 · 多主题 · RTL</h5>
+  <h6>H6: 无障碍 · 响应式 · CSP 兼容</h6>
+</div>
+
+<div class="test-section">
+  <h2>Block Elements</h2>
+  <p>正文段落：Typo.css 的目的是在<strong>一致化浏览器排版效果</strong>的同时，构建最适合<em>中文阅读</em>的网页排版。<a href="#">这是一个链接</a>，点击可以跳转。</p>
+  <blockquote>引用块：一致化浏览器排版效果，构建最适合中文阅读的网页排版。包括桌面和移动平台。</blockquote>
+  <hr>
+  <p>内联元素：<code>inline code</code>、<mark>高亮标记</mark>、<abbr title="Cascading Style Sheets">CSS</abbr>、<u>专名号</u>、<del>删除线</del>。</p>
+</div>
+
+<div class="test-section">
+  <h2>Lists</h2>
+  <ul>
+    <li>无序列表项 A</li>
+    <li>无序列表项 B
+      <ul><li>嵌套列表 1</li><li>嵌套列表 2</li></ul>
+    </li>
+    <li>无序列表项 C</li>
+  </ul>
+  <ol>
+    <li>有序列表项 1</li>
+    <li>有序列表项 2</li>
+    <li>有序列表项 3</li>
+  </ol>
+</div>
+
+<div class="test-section">
+  <h2>Code Block</h2>
+  <pre><code>/* Typo.css 代码块示例 */
+body {
+  font-family: var(--typo-font-sans);
+  font-size: 1rem;
+  line-height: 1.8;
+}</code></pre>
+</div>
+
+<div class="test-section">
+  <h2>Table</h2>
+  <table>
+    <thead><tr><th>属性</th><th>值</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>font-size</td><td>1rem</td><td>基准字号</td></tr>
+      <tr><td>line-height</td><td>1.8</td><td>行高</td></tr>
+      <tr><td>color</td><td>#333</td><td>正文颜色</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="test-section">
+  <h2>Special Marks</h2>
+  <p>着重号示例：这里<em class="typo-em">强调一下</em>，专名号示例：<u class="typo-u">林建锋</u></p>
+  <p>首段大字：<span class="typo-first" style="display:inline-block">这</span>是 typo-first 的效果展示。</p>
+</div>
+
+</body>
+</html>

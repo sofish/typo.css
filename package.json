@@ -1,23 +1,90 @@
 {
   "name": "typo.css",
-  "version": "2.1.2",
-  "description": "一致化浏览器排版效果，构建最适合中文阅读的网页排版",
-  "main": "typo.css",
+  "version": "3.0.1",
+  "description": "一致化浏览器排版效果，构建最适合中文阅读的网页排版——模块化/多主题/RTL支持",
+  "main": "dist/typo.min.css",
+  "style": "dist/typo.min.css",
+  "types": "typo.css.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/",
+    "src/",
+    "typo.css.d.ts",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/typo.min.css",
+      "types": "./typo.css.d.ts"
+    },
+    "./dist/*": "./dist/*",
+    "./reset": "./dist/reset.css",
+    "./base": "./dist/base.css",
+    "./typography": "./dist/typography.css",
+    "./code": "./dist/code.css",
+    "./table": "./dist/table.css",
+    "./forced-colors": "./dist/forced-colors.css",
+    "./reduced-data": "./dist/reduced-data.css",
+    "./utilities": "./dist/utilities.css",
+    "./theme-dark": "./dist/themes/dark.css",
+    "./theme-sepia": "./dist/themes/sepia.css",
+    "./theme-contrast": "./dist/themes/contrast.css",
+    "./theme-large": "./dist/themes/large.css",
+    "./rtl": "./dist/rtl.css",
+    "./print": "./dist/print.css"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cat src/reset.css src/base.css src/typography.css src/code.css src/table.css src/utilities.css src/rtl.css src/forced-colors.css src/reduced-data.css src/print.css > dist/typo.css && cp src/reset.css dist/ && cp src/base.css dist/ && cp src/typography.css dist/ && cp src/code.css dist/ && cp src/table.css dist/ && cp src/utilities.css dist/ && cp src/rtl.css dist/ && cp src/forced-colors.css dist/ && cp src/reduced-data.css dist/ && cp src/print.css dist/ && mkdir -p dist/themes && cp src/themes/*.css dist/themes/",
+    "build:full": "npm run build && npm run minify",
+    "minify": "postcss dist/typo.css --from dist/typo.css -o dist/typo.min.css",
+    "lint": "stylelint 'src/**/*.css'",
+    "test": "node test/runner.js",
+    "test:junit": "node test/runner.js --junit test-results.xml",
+    "prepublishOnly": "npm run build && npm run minify"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sofish/typo.css.git"
+    "url": "https://github.com/tyin/typo.css.git"
   },
   "keywords": [
-    "typograhpy",
-    "中文"
+    "css",
+    "typography",
+    "chinese",
+    "中文排版",
+    "reset",
+    "dark-mode",
+    "rtl",
+    "responsive",
+    "print"
   ],
-  "author": "sofish <happinesz@gmail.com> (http://sofi.sh/)",
+  "author": "Sofish Lin <happinesz@gmail.com> (http://sofi.sh/)",
+  "contributors": [
+    "Tang Yin <tyin@example.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sofish/typo.css/issues"
+    "url": "https://github.com/tyin/typo.css/issues"
   },
-  "homepage": "https://github.com/sofish/typo.css"
+  "homepage": "https://github.com/tyin/typo.css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^7.0.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^11.0.0",
+    "stylelint": "^17.0.0",
+    "stylelint-config-standard": "^40.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "Android >= 4.4",
+    "and_qq >= 10",
+    "and_uc >= 12",
+    "not dead",
+    "not IE 11",
+    "not op_mini all"
+  ]
 }

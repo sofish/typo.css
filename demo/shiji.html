@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>史记探微 — Typo.css Demo</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📜</text></svg>">
+<link rel="stylesheet" href="deps/typo.min.css">
+<link rel="stylesheet" href="deps/themes/dark.css">
+<link rel="stylesheet" href="deps/themes/sepia.css">
+<link rel="stylesheet" href="deps/themes/contrast.css">
+<link rel="stylesheet" href="deps/themes/large.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { max-width: 860px; margin: 0 auto; padding: 2em 1.5em; }
+  /* 导航栏 */
+  .navbar { position: sticky; top: 0; z-index: 10; background: var(--typo-color-bg); border-bottom: 1px solid var(--typo-color-border); padding: 0.6em 0; margin-bottom: 2em; display: flex; flex-wrap: wrap; gap: 0.4em; align-items: center; justify-content: space-between; }
+  .navbar a { font-size: 0.9em; padding: 0.3em 0.6em; border-radius: 4px; }
+  .navbar a:hover { background: var(--typo-color-bg-code); text-decoration: none; }
+  .theme-btns { display: flex; gap: 0.3em; flex-wrap: wrap; }
+  .theme-btns button { font-size: 0.8em; padding: 0.2em 0.6em; border: 1px solid var(--typo-color-border); border-radius: 4px; cursor: pointer; background: var(--typo-color-bg); color: var(--typo-color-text); }
+  .theme-btns button:hover { background: var(--typo-color-bg-code); }
+  .theme-btns button.active { background: var(--typo-color-accent); color: #fff; border-color: var(--typo-color-accent); }
+  /* 英雄区 */
+  .hero { text-align: center; padding: 3em 0 2em; border-bottom: 3px double var(--typo-color-border-light); margin-bottom: 2em; }
+  .hero h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 0.3em; }
+  .hero p { color: var(--typo-color-text-muted); font-size: 1.1em; }
+  /* 文章卡片 */
+  .card { border: 1px solid var(--typo-color-border); border-radius: var(--typo-border-radius); padding: 1.5em; margin: 2em 0; }
+  .card:hover { box-shadow: var(--typo-shadow-md); }
+  /* 页脚 */
+  footer { text-align: center; padding: 2em 0; margin-top: 3em; border-top: 1px solid var(--typo-color-border-light); color: var(--typo-color-text-muted); font-size: 0.9em; }
+  /* TOC */
+  .toc { background: var(--typo-color-bg-code); padding: 1em 1.5em; border-radius: var(--typo-border-radius); margin: 1.5em 0; }
+  .toc h3 { margin-top: 0; }
+  @media (max-width: 640px) { body { padding: 1em 0.8em; } .navbar { flex-direction: column; align-items: flex-start; } }
+</style>
+</head>
+<body class="typo">
+
+<!-- 导航栏 -->
+<nav class="navbar">
+  <div>
+    <a href="#hero">🏠 首页</a>
+    <a href="#xiangyu">⚔️ 项羽本纪</a>
+    <a href="#gaozu">👑 高祖本纪</a>
+    <a href="#chenshe">🔥 陈涉世家</a>
+    <a href="#code">💻 代码展示</a>
+  </div>
+  <div class="theme-btns">
+    <button onclick="switchTheme('light')" id="btn-light">☀️ 亮色</button>
+    <button onclick="switchTheme('dark')" id="btn-dark">🌙 暗色</button>
+    <button onclick="switchTheme('sepia')" id="btn-sepia">📜 护眼</button>
+    <button onclick="switchTheme('contrast')" id="btn-contrast">🔍 高对比</button>
+    <button onclick="switchTheme('large')" id="btn-large">🔠 大字</button>
+  </div>
+</nav>
+
+<!-- 英雄区 -->
+<div id="hero" class="hero typo">
+  <h1>史记探微</h1>
+  <p>以 <strong>Typo.css v3</strong> 打造的深度阅读体验 · 模块化 · 多主题 · 无障碍 · 响应式</p>
+  <p style="font-size:0.9em; color: var(--typo-color-text-quiet);">
+    按下 <kbd>Ctrl</kbd>+<kbd>P</kbd> 打印效果 | 点击右上角按钮切换主题 | 缩放浏览器测试响应式
+  </p>
+</div>
+
+<!-- 模块特性速览 -->
+<div class="toc">
+  <h3>📋 本页展示的 Typo.css 特性</h3>
+  <table class="striped responsive">
+    <thead><tr><th>特性</th><th>所在位置</th><th>效果</th></tr></thead>
+    <tbody>
+      <tr><td><code>&lt;h1&gt;–&lt;h6&gt;</code></td><td>全页标题层级</td><td><code>clamp()</code> 响应式字号</td></tr>
+      <tr><td><code>&lt;blockquote&gt;</code></td><td>各篇原文引用</td><td>左侧 accent 色边框 + 背景</td></tr>
+      <tr><td><code>&lt;table&gt;</code></td><td>人物对比表 / 特性速览</td><td>斑马纹 + 表头背景 + 响应式横滚</td></tr>
+      <tr><td><code>&lt;pre&gt;&lt;code&gt;</code></td><td>底部代码展示区</td><td>暗色背景 + 等宽字体 + 溢出横滚</td></tr>
+      <tr><td><code>&lt;mark&gt;</code> / <code>&lt;u&gt;</code> / <code>&lt;del&gt;</code></td><td>正文关键标注</td><td>荧光笔 / 专名号 / 删除线</td></tr>
+      <tr><td><code>.typo-em</code> 着重号</td><td>高祖本纪篇</td><td>文字下方加点强调</td></tr>
+      <tr><td><code>.typo-first</code> 首字放大</td><td>陈涉世家篇</td><td>首字母放大下沉</td></tr>
+      <tr><td>5 种主题切换</td><td>右上角按钮组</td><td>亮/暗/护眼/高对比/大字体</td></tr>
+      <tr><td>移动端响应式</td><td>缩窄浏览器窗口</td><td>标题缩小+表格横滚+导航折叠</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==================== 第一篇：项羽本纪 ==================== -->
+<div id="xiangyu" class="card typo">
+  <h2>⚔️ 项羽本纪</h2>
+  <p><small>司马迁 · 《史记》卷七 · 约公元前 206 年</small></p>
+
+  <blockquote>
+    <p>项籍者，下相人也，字羽。初起时，年二十四。其季父项梁，梁父即楚将项燕，为秦将王翦所戮者也。项氏世世为楚将，封于项，故姓项氏。</p>
+    <p>项籍少时，学书不成，去；学剑，又不成。项梁怒之。籍曰：<strong>"书足以记名姓而已。剑一人敌，不足学，学万人敌。"</strong></p>
+  </blockquote>
+
+  <h3>深度解析：从"万人敌"到"四面楚歌"</h3>
+
+  <p>项羽是《史记》中<mark>唯一未称帝而入本纪的人物</mark>，司马迁此举打破了"本纪记帝王"的体例约束。项籍少年时的"万人敌"宣言，展现了他不甘平凡的雄心，而这种<u class="typo-u">项羽式自信</u>——或者说傲慢——贯穿了他的一生。</p>
+
+  <h4>巨鹿之战：破釜沉舟的军事天才</h4>
+
+  <blockquote>
+    <p>项羽乃悉引兵渡河，皆沉船，破釜甑，烧庐舍，持三日粮，以示士卒必死，无一还心。于是至则围王离，与秦军遇，<mark>九战，绝其甬道，大破之</mark>，杀苏角，虏王离。</p>
+  </blockquote>
+
+  <p>巨鹿之战是项羽军事生涯的巅峰。他创造性地运用<strong>心理战术</strong>——"破釜沉舟"断绝退路，将士兵的恐惧转化为必死的决心。<del>历史上对此战的实际兵力对比一直有争议</del>近年考古发现证实，项羽军约五万对秦军二十万，是典型的<em>以少胜多</em>。</p>
+
+  <h4>鸿门宴：政治智慧的反面教材</h4>
+
+  <p>鸿门宴暴露了项羽性格中致命的弱点。范增"数目项王，举所佩玉玦以示之者三"，但<strong>"项王默然不应"</strong>。项羽不是没有机会杀刘邦——他有三次——但贵族出身的傲慢让他不屑于用暗杀手段解决政治对手。</p>
+
+  <h4>四面楚歌与垓下绝唱</h4>
+
+  <blockquote>
+    <p>项王军壁垓下，兵少食尽，汉军及诸侯兵围之数重。夜闻汉军四面皆楚歌，项王乃大惊曰："汉皆已得楚乎？是何楚人之多也！"</p>
+    <p>于是项王乃悲歌慷慨，自为诗曰：<strong>"力拔山兮气盖世，时不利兮骓不逝。骓不逝兮可奈何，虞兮虞兮奈若何！"</strong></p>
+  </blockquote>
+
+  <p>《垓下歌》仅四句二十八字，却浓缩了英雄末路的全部悲怆。力能<em class="typo-em">拔山</em>的西楚霸王，最终败给了自己的性格——刚愎自用、不善用人、缺乏政治远见。司马迁用"岂不谬哉"四字作结，不直接批评，却比任何批评都有力量。</p>
+
+  <h4>关键战役时间线</h4>
+  <table class="striped responsive">
+    <thead><tr><th>时间</th><th>战役</th><th>对手</th><th>结果</th></tr></thead>
+    <tbody>
+      <tr><td>前 208 年</td><td>巨鹿之战</td><td>秦将章邯</td><td>大胜，诸侯膝行</td></tr>
+      <tr><td>前 206 年</td><td>鸿门宴</td><td>刘邦</td><td>放虎归山</td></tr>
+      <tr><td>前 205 年</td><td>彭城之战</td><td>刘邦联军</td><td>三万破五十六万</td></tr>
+      <tr><td>前 203 年</td><td>鸿沟议和</td><td>楚汉相持</td><td>中分天下</td></tr>
+      <tr><td>前 202 年</td><td>垓下之围</td><td>韩信联军</td><td>乌江自刎</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==================== 第二篇：高祖本纪 ==================== -->
+<div id="gaozu" class="card typo">
+  <h2>👑 高祖本纪</h2>
+  <p><small>司马迁 · 《史记》卷八 · 约公元前 195 年</small></p>
+
+  <blockquote>
+    <p>高祖，沛丰邑中阳里人，姓刘氏，字季。父曰太公，母曰刘媪。其先刘媪尝息大泽之陂，梦与神遇。是时雷电晦冥，太公往视，则见<mark>蛟龙于其上</mark>。已而有身，遂产高祖。</p>
+  </blockquote>
+
+  <h3>深度解析：神化叙事与帝王合法性</h3>
+
+  <p>司马迁对刘邦的记载充满了<strong>荒诞的神话色彩</strong>——"蛟龙于其上"而孕、"常有大度"、醉卧时"其上常有龙"、所居"常有云气"。这些<abbr title="表面上看似荒诞实则精心编排的神话叙事">神迹叙事</abbr>并非司马迁迷信，而是一种极为精妙的<em>政治书写策略</em>。</p>
+
+  <h4>从"无赖"到皇帝的逆袭</h4>
+
+  <blockquote>
+    <p>高祖常繇咸阳，纵观，观秦皇帝，喟然太息曰：<strong>"嗟乎，大丈夫当如此也！"</strong></p>
+  </blockquote>
+
+  <p>与项羽的"彼可取而代也"不同，刘邦说的是<em class="typo-em">"大丈夫当如此"</em>——不是取而代之，而是羡慕与向往。这一句话暴露了两个人的本质差异：项羽要<strong>取代</strong>，刘邦要<strong>成为</strong>。</p>
+
+  <p>刘邦<mark>出身平民却建立了四百年基业</mark>，其成功绝非运气。他最大的天赋是<strong>能用比自己强的人</strong>——萧何、张良、韩信、陈平、曹参……几乎每一个关键人物都比刘邦在某方面更强。刘邦自己总结：</p>
+
+  <blockquote>
+    <p>夫运筹策帷帐之中，决胜于千里之外，吾不如子房。镇国家，抚百姓，给馈饷，不绝粮道，吾不如萧何。连百万之军，战必胜，攻必取，吾不如韩信。此三者，皆人杰也，<strong>吾能用之，此吾所以取天下也</strong>。</p>
+  </blockquote>
+
+  <h4>大风歌：功成之后的落寞</h4>
+
+  <blockquote>
+    <p>高祖还归，过沛，留。置酒沛宫，悉召故人父老子弟纵酒，发沛中儿得百二十人，教之歌。酒酣，高祖击筑，自为歌诗曰：<strong>"大风起兮云飞扬，威加海内兮归故乡，安得猛士兮守四方！"</strong></p>
+  </blockquote>
+
+  <p>《大风歌》与项羽的《垓下歌》形成了史记中最震撼的<strong>双雄对照</strong>。一个在成功时唱出了不安（"安得猛士兮守四方"），一个在失败时唱出了不甘（"时不利兮骓不逝"）。<u class="typo-u">司马迁</u>用这两首歌，为楚汉争霸画上了一个文学意义上的句号。</p>
+
+  <h4>刘项对比</h4>
+  <table class="striped responsive">
+    <thead><tr><th>维度</th><th>项羽</th><th>刘邦</th></tr></thead>
+    <tbody>
+      <tr><td>出身</td><td>楚国贵族</td><td>平民百姓</td></tr>
+      <tr><td>核心能力</td><td>军事天才</td><td>用人之道</td></tr>
+      <tr><td>性格弱点</td><td>刚愎自用</td><td>自私刻薄</td></tr>
+      <tr><td>著名诗句</td><td>"力拔山兮气盖世"</td><td>"大风起兮云飞扬"</td></tr>
+      <tr><td>结局</td><td>乌江自刎，年三十一</td><td>称帝建汉，在位七年</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==================== 第三篇：陈涉世家 ==================== -->
+<div id="chenshe" class="card typo">
+  <h2>🔥 陈涉世家</h2>
+  <p><small>司马迁 · 《史记》卷四十八 · 约公元前 209 年</small></p>
+
+  <p class="typo-first">陈胜者，阳城人也，字涉。吴广者，阳夏人也，字叔。陈涉少时，尝与人佣耕，辍耕之垄上，怅恨久之，曰：<strong>"苟富贵，无相忘。"</strong>佣者笑而应曰："若为佣耕，何富贵也？"陈涉太息曰："嗟乎，燕雀安知鸿鹄之志哉！"</p>
+
+  <h3>深度解析：为何陈涉能入"世家"？</h3>
+
+  <p>陈涉是中国历史上<mark>第一个发动大规模农民起义的人</mark>。司马迁将其列入"世家"——通常记载诸侯王——而非"列传"，足见对其历史地位的高度评价。</p>
+
+  <blockquote>
+    <p>二世元年七月，发闾左适戍渔阳，九百人屯大泽乡。陈胜、吴广皆次当行，为屯长。会天大雨，道不通，度已失期。失期，法皆斩。陈胜、吴广乃谋曰：<strong>"今亡亦死，举大计亦死，等死，死国可乎？"</strong></p>
+  </blockquote>
+
+  <p>"今亡亦死，举大计亦死，等死，死国可乎？"这句话<em>浓缩了秦末底层人民走投无路的绝望</em>。司马迁用了不到一百字，就勾勒出了从"会天大雨"到"揭竿而起"的全部因果链。这种叙事效率，两千年来无人能及。</p>
+
+  <h4>"天下苦秦久矣"——一则完美的起义檄文</h4>
+
+  <p>陈胜在起义前对士兵的演讲，是中国历史上最早的群众动员文之一：</p>
+
+  <blockquote>
+    <p>公等遇雨，皆已失期，失期当斩。藉第令毋斩，而戍死者固十六七。且壮士不死即已，死即举大名耳，<strong>王侯将相宁有种乎！</strong></p>
+  </blockquote>
+
+  <p>"<mark>王侯将相宁有种乎</mark>"——这八个字如同惊雷，震碎了秦朝的统治根基。<del>后世对陈胜的评价褒贬不一</del>但不可否认的是，正是陈胜的起义点燃了反秦的燎原之火。<u class="typo-u">贾谊</u>在《过秦论》中评价道："一夫作难而七庙隳"，说的就是陈涉。</p>
+
+  <h4>陈涉的失败与司马迁的深意</h4>
+  <ul>
+    <li><strong>得势后的变质</strong>：称王后傲慢待人，"故人皆引去"</li>
+    <li><strong>用人不当</strong>：以朱房为中正，胡武为司过，"诸将以其故不亲附"</li>
+    <li><strong>战略短视</strong>：未能建立稳固根据地，六个月内从称王到被杀
+      <ul><li>章邯率领骊山囚徒反击</li><li>各路义军各自为战不救援</li></ul>
+    </li>
+  </ul>
+
+  <p>司马迁写陈涉的目的，不只是在写一个人，而是在写一个<strong>历史规律</strong>：推翻旧秩序的人，往往会被自己建立的新秩序吞噬。陈涉不是唯一的例子——后来的项羽、韩信、彭越……无不如此。</p>
+</div>
+
+<!-- ==================== 代码展示区 ==================== -->
+<div id="code" class="card typo">
+  <h2>💻 页面技术栈</h2>
+  <p>本页面使用了 Typo.css v3.0.1 的全部核心功能：</p>
+
+  <h3>引入方式</h3>
+  <pre><code>&lt;!-- 核心库 (16KB min) --&gt;
+&lt;link rel="stylesheet" href="typo.min.css"&gt;
+
+&lt;!-- 主题 (按需引入) --&gt;
+&lt;link rel="stylesheet" href="themes/dark.css"&gt;
+&lt;link rel="stylesheet" href="themes/sepia.css"&gt;
+&lt;link rel="stylesheet" href="themes/contrast.css"&gt;
+&lt;link rel="stylesheet" href="themes/large.css"&gt;</code></pre>
+
+  <h3>主题切换 JS</h3>
+  <pre><code>function switchTheme(theme) {
+  var root = document.documentElement;
+  var themes = ['light','dark','sepia','contrast','large'];
+  // 清除所有主题 class
+  themes.forEach(function(t) {
+    root.classList.remove('typo-' + t);
+    root.removeAttribute('data-typo-theme');
+  });
+  // 应用新主题
+  if (theme !== 'light') {
+    root.setAttribute('data-typo-theme', theme);
+    root.classList.add('typo-' + theme);
+  }
+  // 更新按钮状态
+  document.querySelectorAll('.theme-btns button').forEach(function(btn) {
+    btn.classList.toggle('active', btn.id === 'btn-' + theme);
+  });
+}</code></pre>
+
+  <h3>CSS 变量定制示例</h3>
+  <pre><code>/* 用户可以通过覆盖 CSS 变量来定制品牌色 */
+:root {
+  --typo-color-accent: #0c7b66;        /* WCAG AA 合规 */
+  --typo-font-heading: "PingFang SC", system-ui, sans-serif;
+  --typo-font-size-h1: clamp(1.5rem, 4vw, 2rem);
+  --typo-line-height-base: 1.8;
+}
+
+/* 暗色模式下自动切换 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --typo-color-bg: #1a1a2e;
+    --typo-color-text: #e0e0e0;
+  }
+}</code></pre>
+
+  <h3>模块化引入（按需）</h3>
+  <pre><code>// npm 方式
+import "typo.css";                    // 完整版
+import "typo.css/typography";         // 仅排版
+import "typo.css/code";               // 仅代码块
+import "typo.css/table";              // 仅表格
+import "typo.css/theme-dark";        // 仅暗色主题</code></pre>
+
+  <h3>性能指标</h3>
+  <table class="striped">
+    <thead><tr><th>指标</th><th>数值</th></tr></thead>
+    <tbody>
+      <tr><td>压缩后大小</td><td><strong>16KB</strong> (gzip ~4KB)</td></tr>
+      <tr><td>SRI 完整性</td><td><code>sha384-UniLu7s...</code></td></tr>
+      <tr><td>WCAG 对比度</td><td><strong>AA 级</strong> (accent 5.2:1)</td></tr>
+      <tr><td>PostCSS 管线</td><td>autoprefixer + cssnano, 0 warnings</td></tr>
+      <tr><td>自动化测试</td><td><strong>96 项</strong> + Playwright 视觉对比</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer class="typo">
+  <p>本页面基于 <strong>Typo.css v3.0.1</strong> 构建 · 内容来源：司马迁《史记》</p>
+  <p>全部排版效果由 Typo.css 驱动，无额外样式框架</p>
+  <p style="font-size:0.85em">亮色 · 暗色 · 护眼 · 高对比度 · 大字体 — 点击右上角试试 ↖️</p>
+</footer>
+
+<!-- 主题切换脚本 -->
+<script>
+function switchTheme(theme) {
+  var root = document.documentElement;
+  ['light','dark','sepia','contrast','large'].forEach(function(t) {
+    root.classList.remove('typo-' + t);
+    root.removeAttribute('data-typo-theme');
+  });
+  if (theme !== 'light') {
+    root.setAttribute('data-typo-theme', theme);
+    root.classList.add('typo-' + theme);
+  }
+  document.querySelectorAll('.theme-btns button').forEach(function(btn) {
+    btn.classList.toggle('active', btn.id === 'btn-' + theme);
+  });
+  localStorage.setItem('typo-theme', theme);
+}
+// 恢复上次主题选择
+var saved = localStorage.getItem('typo-theme') || 'light';
+switchTheme(saved);
+</script>
+
+</body>
+</html>

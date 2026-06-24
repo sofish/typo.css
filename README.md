@@ -1,43 +1,152 @@
-## 中文网页重设与排版：
+# Typo.css v3.0.1
 
-目标：一致化浏览器排版效果，构建最适合中文阅读的网页排版。包括桌面和移动平台。
+> 一致化浏览器排版效果，构建最适合中文阅读的网页排版。
+> 模块化 · 多主题 · RTL · 无障碍 · 响应式
 
-预览：[typo.css](http://typo.sofi.sh)
+[![npm version](https://img.shields.io/npm/v/typo.css)](https://www.npmjs.com/package/typo.css)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-### 一、目录结构    
-    .
-    ├── README.md           --- 使用帮助
-    ├── license.txt         --- 许可证
-    ├── typo.css            --- 将应用于你的项目
-    └── typo.html           --- Demo/预览
+## 快速开始
 
+### CDN
 
-### 二、TYPO.CSS 的设计和使用
+```html
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/typo.css@3/dist/typo.min.css"
+      integrity="sha384-UniLu7s1kXQFR22Zsx/OKOtOJq2Fn82/z42x8/mAEgc5kvC0V6lXKTZN9uJY1hbN"
+      crossorigin="anonymous">
+```
 
+### npm
 
-## TYPO.CSS 主要包括：
+```bash
+npm install typo.css
+```
 
-1、一般 reset.css 所需的内容
- 
-目前的设计是这样的，尽量保持完整的 reset，比如让 ul/ol 无样式并且无多余的 `padding`/`margin`，这是必须的，因为一个网可能需要很多自定义的的内容，在实践中我们并不希望像 ul/ol 有样式，这样我们得用优先级去覆盖，这是非常麻烦的事。所以 typo.css 并不像 normalize.css，后者给每一个元素都预先定义了样式，这样在自定义的时候将是非常痛苦的。要大保持干净的所有元素一致化的 reset 才是最佳实践。
+```js
+import "typo.css";                    // 完整版 (16KB)
+import "typo.css/typography";         // 仅排版
+import "typo.css/theme-dark";         // 暗色主题
+import "typo.css/theme-sepia";        // 护眼主题
+import "typo.css/theme-contrast";     // 高对比度
+import "typo.css/theme-large";        // 大字体
+import "typo.css/rtl";                // RTL 支持
+```
 
-2、`class="typo"` 阅读内容排版
+### 使用
 
-在文章/文档阅读的页面，需添加 `.typo` 这个 class，这样 table/ol/ul 等都会有预定的样式，让你的排版像 [http://typo.sofi.sh](http://typo.sofi.sh) 一样，让用户阅读起来更舒服。
+```html
+<article class="typo">
+  <h1>文章标题</h1>
+  <p>正文内容...</p>
+</article>
+```
 
-在父容器在没有添加 `class="typo"` 的时候，可以使用 `class="typo-标签"`（如 `class="typo-ul"`）来实现像 `.typo > ul` 这样结构的样式。
- 
-3、增加类：
+### 主题
 
-主要是一些需要中文日常排版需要的元素和语文对应样式的增强，目前包括：
+```html
+<!-- 暗色模式 -->
+<article class="typo typo-dark">...</article>
 
-(1) 专名号：使用标签 `<u>` 或者 `.typo-u` <br />
-(2) 着重号：使用 class `.typo-em` <br />
-(3) 清理浮动：与一般 reset.css 保持一致 `.clearfix` <br />
-(4) 强制换行：添加 `.textwrap` 到文本所在的容器，如果是 `table` 测还需要 `.textwrap-table` <br />
-(5) 衬线字体：添加 `.serif` <br />
-(6) 创建 border-box：在 html 中添加 `.borderbox` [#why](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+<!-- 护眼模式 -->
+<article class="typo typo-sepia">...</article>
 
+<!-- RTL 排版 -->
+<article class="typo typo-rtl" dir="rtl">...</article>
 
-### 三、开源许可
-基于 [MIT License](http://zh.wikipedia.org/wiki/MIT_License) 开源，使用代码只需说明来源，或者引用 [license.txt](https://github.com/sofish/typo.css/blob/master/license.txt) 即可。
+<!-- 跟随系统 -->
+<article class="typo">
+  <!-- 系统亮色→默认；系统暗色→自动切换暗色 -->
+</article>
+
+<!-- 强制指定 -->
+<article class="typo" data-typo-theme="light">...</article>
+<article class="typo" data-typo-theme="dark">...</article>
+```
+
+### 主题叠加
+
+颜色主题与尺寸主题相互独立，可自由组合：
+
+```html
+<!-- 暗色 + 大字体 -->
+<article class="typo typo-dark typo-large">...</article>
+
+<!-- 护眼 + 大字体 -->
+<article class="typo typo-sepia typo-large">...</article>
+
+<!-- 高对比度 + 大字体（AAA 级无障碍） -->
+<article class="typo typo-contrast typo-large">...</article>
+```
+
+### JavaScript 主题切换
+
+```html
+<script src="node_modules/typo.css/theme-switcher.js"></script>
+<button onclick="TypoTheme.set('dark')">暗色</button>
+<button onclick="TypoTheme.set('sepia')">护眼</button>
+<button onclick="TypoTheme.set('large')">大字</button>
+<button onclick="TypoTheme.reset()">跟随系统</button>
+```
+
+API: `TypoTheme.set('dark'|'sepia'|'contrast'|'large'|'auto')` · `TypoTheme.get()` · `TypoTheme.reset()`
+
+### 模块列表
+
+| 模块 | 路径 | 用途 |
+|------|------|------|
+| Reset | `typo.css/reset` | 浏览器默认样式重置（按类别分组） |
+| Base | `typo.css/base` | CSS 变量 + 全局基础样式 |
+| Typography | `typo.css/typography` | `.typo` 容器排版 |
+| Code | `typo.css/code` | 代码块排版 |
+| Table | `typo.css/table` | 表格排版（含斑马纹+响应式） |
+| Utilities | `typo.css/utilities` | 辅助 class（含 `.sr-only`） |
+| RTL | `typo.css/rtl` | 从右向左排版支持 |
+| Forced Colors | `typo.css/forced-colors` | Windows 高对比度模式 |
+| Reduced Data | `typo.css/reduced-data` | 省流量模式 |
+| Print | `typo.css/print` | 打印优化 |
+| Dark Theme | `typo.css/theme-dark` | 暗色主题（auto+手动） |
+| Sepia Theme | `typo.css/theme-sepia` | 护眼主题 |
+| Contrast Theme | `typo.css/theme-contrast` | 高对比度（WCAG AAA） |
+| Large Theme | `typo.css/theme-large` | 大字体可访问变体 |
+
+## 浏览器支持
+
+Chrome 90+, Firefox 90+, Safari 15+, Edge 90+, iOS Safari 15+, Android Chrome 90+, QQ浏览器 10+, UC浏览器 12+
+
+### 架构说明
+
+typo.css v3 采用拼合式构建，10 个源模块按固定顺序连接：`reset → base → typography → code → table → utilities → rtl → forced-colors → reduced-data → print`。此顺序即 CSS cascade 优先级——后声明的模块优先级更高。`src/index.css` 中的 `@layer` 声明为开发时参考，构建后不保留。
+
+## 从 v2 迁移
+
+### 最小迁移（保持兼容）
+
+```html
+<!-- v2 -->
+<link rel="stylesheet" href="typo.css">
+
+<!-- v3（向后兼容） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typo.css@3/dist/typo.min.css">
+```
+
+### 按需引入
+
+```html
+<link rel="stylesheet" href="typo.css@3/dist/reset.css">
+<link rel="stylesheet" href="typo.css@3/dist/base.css">
+<link rel="stylesheet" href="typo.css@3/dist/typography.css">
+```
+
+### v2 → v3 注意点
+
+- `.typo` / `.typo-p` / `.typo-h1` 等所有 class **完全向后兼容**
+- v2 的 `.borderbox` class 不再需要（v3 默认 `box-sizing: border-box`）
+- v3 新增 10 个模块（代码/表格/forced-colors/reduced-data 等）
+- 主题文件需单独引入（v2 无主题功能）
+
+详见 [CHANGELOG.md](CHANGELOG.md) · [SECURITY.md](SECURITY.md) · [ROADMAP.md](ROADMAP.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## License
+
+MIT © [Sofish Lin](http://sofi.sh/) & [Contributors](CONTRIBUTING.md)

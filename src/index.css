@@ -1,0 +1,17 @@
+/* ==========================================================================
+   typo.css v3.0.1 — 完整包入口
+   导入顺序即 @layer 优先级: reset → base → typography → code → table
+   → utilities → rtl → forced-colors → reduced-data → print
+   构建时 cat 拼接此顺序，保证 layer 语义正确（无需 @layer）
+   ========================================================================== */
+
+@import url("./reset.css") layer(typo-reset);
+@import url("./base.css") layer(typo-base);
+@import url("./typography.css") layer(typo-typography);
+@import url("./code.css") layer(typo-code);
+@import url("./table.css") layer(typo-table);
+@import url("./utilities.css") layer(typo-utilities);
+@import url("./rtl.css") layer(typo-rtl);
+@import url("./forced-colors.css") layer(typo-forced-colors);
+@import url("./reduced-data.css") layer(typo-reduced-data);
+@import url("./print.css") layer(typo-print);

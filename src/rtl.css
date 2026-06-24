@@ -1,0 +1,72 @@
+/* ==========================================================================
+   typo.css v3.0.0 — RTL Support (Right-to-Left)
+   支持阿拉伯语、希伯来语等从右向左阅读的语言
+   通过 dir="rtl" 属性或 .typo-rtl class 激活
+   覆盖：列表/引用块/标题/代码块/表格/表单
+   ========================================================================== */
+
+[dir="rtl"] .typo,
+.typo-rtl {
+  direction: rtl;
+  text-align: start;
+}
+
+/* ── 引用块：边框翻转到右侧 ── */
+[dir="rtl"] .typo blockquote,
+.typo-rtl blockquote {
+  border-inline-start: none;
+  border-inline-end: var(--typo-blockquote-border-width, 3px) solid var(--typo-color-accent);
+  border-radius: var(--typo-border-radius) 0 0 var(--typo-border-radius);
+}
+
+/* ── 列表：margin 翻转到右侧 ── */
+[dir="rtl"] .typo ul,
+[dir="rtl"] .typo-ul,
+.typo-rtl ul,
+.typo-rtl .typo-ul {
+  margin-inline: 0 1.3em;
+}
+
+[dir="rtl"] .typo ol,
+[dir="rtl"] .typo-ol,
+.typo-rtl ol,
+.typo-rtl .typo-ol {
+  margin-inline: 0 1.9em;
+}
+
+[dir="rtl"] .typo li ul,
+[dir="rtl"] .typo li ol,
+.typo-rtl li ul,
+.typo-rtl li ol {
+  margin-inline: 0 var(--typo-space-2xl);
+}
+
+/* ── 标题：确保右对齐（覆盖默认左对齐） ── */
+[dir="rtl"] .typo h1, [dir="rtl"] .typo h2, [dir="rtl"] .typo h3,
+[dir="rtl"] .typo h4, [dir="rtl"] .typo h5, [dir="rtl"] .typo h6,
+[dir="rtl"] .typo-h1, [dir="rtl"] .typo-h2, [dir="rtl"] .typo-h3,
+[dir="rtl"] .typo-h4, [dir="rtl"] .typo-h5, [dir="rtl"] .typo-h6,
+.typo-rtl h1, .typo-rtl h2, .typo-rtl h3,
+.typo-rtl h4, .typo-rtl h5, .typo-rtl h6 {
+  text-align: start;
+}
+
+/* ── 代码块：保持 LTR（代码通常从左到右） ── */
+[dir="rtl"] .typo pre,
+[dir="rtl"] .typo code,
+.typo-rtl pre,
+.typo-rtl code {
+  direction: ltr;
+  text-align: start;
+}
+
+/* ── 表格：保持 LTR（表格数据通常从左到右） ── */
+[dir="rtl"] .typo table caption,
+.typo-rtl table caption {
+  text-align: start;
+}
+
+/* ── 水平线可见性 ── */
+[dir="rtl"] hr {
+  border-bottom-color: var(--typo-color-border-light);
+}

@@ -1,0 +1,79 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Print Stylesheet
+   打印时优化：去掉背景色、确保可读性、保护 URL 隐私
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+    color: #000 !important;
+    overflow-wrap: break-word;
+  }
+
+  /* 仅打印同页锚链接的引用（不含敏感外部 URL） */
+  a[href^="#"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /* 隐私保护：对含敏感 title 的缩写，添加 .no-print-title 类 */
+  abbr.no-print-title::after {
+    content: none;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    break-inside: avoid;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+    break-inside: avoid;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}

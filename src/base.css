@@ -1,0 +1,125 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Base Layer (CSS Variables & Design Tokens)
+   所有颜色、字体、间距变量集中管理；支持亮色/暗色/护眼三主题
+   ========================================================================== */
+
+:root {
+  /* ── 基础颜色 ── */
+  --typo-color-text:         #333;
+  --typo-color-text-strong:  #000;
+  --typo-color-text-muted:   #888;
+  --typo-color-text-quiet:   #999;
+  --typo-color-bg:           #fff;
+  --typo-color-bg-code:      #f8f8f8;
+  --typo-color-bg-table-head:#fbfbfb;
+  --typo-color-bg-table-thead:#f1f1f1;
+  --typo-color-bg-mark:      #fffdd1;
+  --typo-color-border:       #ddd;
+  --typo-color-border-light: #cfcfcf;
+  --typo-color-border-mark:  #ffedce;
+
+  /* ── 强调色（品牌色） ── */
+  --typo-color-accent:       #0c7b66;
+  --typo-color-accent-hover: #555;
+
+  /* ── 字体栈（跨平台中英文） ── */
+  --typo-font-sans:  "PingFang SC", "Lantinghei SC", "Microsoft YaHei",
+                     "Hiragino Sans GB", "Microsoft Sans Serif",
+                     "WenQuanYi Micro Hei", system-ui, -apple-system,
+                     BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --typo-font-serif: "Palatino", "Optima", "Noto Serif CJK SC",
+                     "Source Han Serif SC", Georgia, serif;
+  --typo-font-mono:  "Cascadia Code", "Fira Code", "JetBrains Mono",
+                     "Courier New", Courier, monospace;
+  --typo-font-heading: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+
+  /* ── 字号（响应式，基准 16px） ── */
+  --typo-font-size-base:     1rem;
+  --typo-font-size-small:    clamp(0.75rem, 1.5vw, 0.875rem);
+  --typo-font-size-code:     0.9rem;
+  --typo-font-size-h1:       clamp(1.5rem, 4vw, 2rem);
+  --typo-font-size-h2:       clamp(1.35rem, 3.5vw, 1.75rem);
+  --typo-font-size-h3:       clamp(1.2rem, 3vw, 1.5rem);
+  --typo-font-size-h4:       clamp(1.1rem, 2.5vw, 1.25rem);
+  --typo-font-size-h5:       clamp(1rem, 2vw, 1.15rem);
+  --typo-font-size-h6:       clamp(0.95rem, 1.5vw, 1.05rem);
+
+  /* ── 行高 ── */
+  --typo-line-height-base:   1.8;
+  --typo-line-height-heading:1.35;
+
+  /* ── 间距 ── */
+  --typo-space-xxs:  0.25em;
+  --typo-space-xs:   0.5em;
+  --typo-space-sm:   0.8em;
+  --typo-space-md:   1em;
+  --typo-space-lg:   1.2em;
+  --typo-space-xl:   1.5em;
+  --typo-space-2xl:  2em;
+
+  /* ── 边框 ── */
+  --typo-border-radius:  4px;
+  --typo-border-width:   1px;
+
+  /* ── 过渡 ── */
+  --typo-transition-fast: 150ms ease;
+  --typo-transition-base: 250ms ease;
+
+  /* ── 阴影 ── */
+  --typo-shadow-sm: 0 1px 2px rgb(0 0 0 / 5%);
+  --typo-shadow-md: 0 2px 4px rgb(0 0 0 / 8%);
+
+  /* ── 排版微调（可逐项覆盖） ── */
+  --typo-blockquote-border-width: 3px;
+  --typo-mark-padding:            2px;
+  --typo-mark-margin:             0 5px;
+  --typo-mark-radius:             2px;
+  --typo-underline-offset:        0.2em;
+  --typo-emphasis-top:            0.65em;
+  --typo-code-padding:            0.15em 0.4em;
+  --typo-code-block-padding:      1em 1.5em;
+  --typo-code-tab-size:           2;
+  --typo-table-cell-padding:      0.5em 1em;
+}
+
+/* ── Body 应用全局样式 ── */
+body {
+  overflow-wrap: break-word;
+  color: var(--typo-color-text);
+  background: var(--typo-color-bg);
+  color-scheme: light dark;
+  font-family: var(--typo-font-sans);
+  font-size: var(--typo-font-size-base);
+  line-height: var(--typo-line-height-base);
+}
+
+/* ── 链接全局色 ── */
+a {
+  color: var(--typo-color-accent);
+  transition: color var(--typo-transition-fast),
+              border-color var(--typo-transition-fast);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── 标题字体 ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--typo-font-heading);
+  font-weight: 600;
+  line-height: var(--typo-line-height-heading);
+  color: var(--typo-color-text-strong);
+}
+
+/* ── 强调 ── */
+strong, b {
+  font-weight: 700;
+  color: var(--typo-color-text-strong);
+}
+
+/* ── 小字 ── */
+small, figcaption {
+  font-size: var(--typo-font-size-small);
+  color: var(--typo-color-text-muted);
+}

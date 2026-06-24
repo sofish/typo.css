@@ -1,0 +1,59 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Forced Colors Mode (Windows High Contrast)
+   通过 @media (forced-colors: active) 自动激活
+   使用系统颜色确保高对比度模式下内容可读
+   参考: https://www.w3.org/TR/css-color-adjust-1/#forced
+   ========================================================================== */
+
+@media (forced-colors: active) {
+  /* 继承系统颜色 */
+  .typo,
+  .typo * {
+    forced-color-adjust: none;
+  }
+
+  .typo a {
+    color: LinkText;
+    border-bottom-color: LinkText;
+  }
+
+  .typo a:hover {
+    color: LinkText;
+    border-bottom-color: LinkText;
+  }
+
+  .typo blockquote {
+    border-inline-start-color: Highlight;
+    background: Canvas;
+  }
+
+  .typo mark {
+    background: Highlight;
+    color: HighlightText;
+    border-bottom-color: Highlight;
+  }
+
+  .typo table th,
+  .typo-table th {
+    background: Canvas;
+    border-color: ButtonText;
+  }
+
+  .typo pre,
+  .typo code {
+    background: Canvas;
+    border-color: ButtonText;
+    color: CanvasText;
+  }
+
+  .typo hr {
+    border-bottom-color: ButtonText;
+  }
+
+  /* 保留 form 控件焦点可视 */
+  .typo-input:focus-visible,
+  .typo-textarea:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+}

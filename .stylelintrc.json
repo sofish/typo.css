@@ -1,0 +1,27 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "selector-class-pattern": "^[a-z][a-z0-9_-]*$",
+    "no-descending-specificity": [true, { "severity": "warning" }],
+    "declaration-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "custom-property-empty-line-before": null,
+    "no-duplicate-selectors": true,
+    "declaration-block-no-duplicate-properties": true,
+    "max-nesting-depth": 2,
+    "number-max-precision": 4,
+    "property-no-vendor-prefix": [true, {
+      "ignoreProperties": [
+        "appearance",
+        "text-size-adjust",
+        "font-smoothing",
+        "osx-font-smoothing",
+        "overflow-scrolling"
+      ]
+    }],
+    "value-keyword-case": null,
+    "selector-not-notation": "simple",
+    "media-feature-range-notation": null
+  },
+  "ignoreFiles": ["dist/**"]
+}

@@ -1,0 +1,107 @@
+/* ==========================================================================
+   typo.css v3.0.1 — Reset Layer
+   一致化浏览器默认样式，提供干净的排版基线
+   按类别分组：TEXT / BLOCK / FORM / MEDIA / TABLE
+   ========================================================================== */
+
+/* Box-sizing 全局 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── 根与页面 ── */
+:root { color-scheme: light dark; }
+
+html {
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── 统一内外边距 ── */
+/* TEXT: headings + paragraphs + lists + quotes + code + semantic */
+h1, h2, h3, h4, h5, h6,
+p, blockquote,
+ul, ol, li, dl, dt, dd,
+pre, code,
+hr,
+address, caption {
+  margin: 0; padding: 0;
+}
+/* FORM: inputs + buttons + selects + fieldsets */
+form, fieldset, legend,
+input, textarea, select, button {
+  margin: 0; padding: 0;
+}
+/* TABLE */
+th, td { margin: 0; padding: 0; }
+/* HTML5 BLOCK */
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {
+  margin: 0; padding: 0; display: block;
+}
+
+/* ── HTML5 媒体 ── */
+audio, canvas, video { display: inline-block; }
+
+/* ── 表单继承 + 全局重置 ── */
+body, button, input, select, textarea {
+  font: inherit; color: inherit; line-height: inherit;
+}
+/* 去掉浏览器默认外观（保留功能） */
+input, select, textarea, button {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+/* 复选框/单选框 保留可点击区域但移除默认渲染 */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  width: auto;
+  height: auto;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { padding: 0; border: 0; }
+
+/* ── 表格 ── */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* ── 媒体 ── */
+fieldset, img { border: 0; }
+img { max-width: 100%; height: auto; }
+svg:not(:root) { overflow: hidden; }
+
+/* ── 语义 ── */
+del { text-decoration: line-through; }
+ul, ol { list-style: none; }
+caption, th { text-align: left; }
+q::before, q::after { content: ""; }
+
+/* 上下标 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* 链接 */
+a { text-decoration: none; color: inherit; }
+ins { text-decoration: none; }
+
+/* 隐藏 */
+template, [hidden] { display: none; }
