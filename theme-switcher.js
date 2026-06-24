@@ -77,7 +77,7 @@
     set: function (t) {
       if (!(t in themeMap)) { console.warn(`Unknown theme: ${t}`); return; }
       save(t);
-      apply(t === "auto" ? detectSystem() : t);
+      apply(t);
     },
     /** 获取当前主题 */
     get: function () { return load(); },
