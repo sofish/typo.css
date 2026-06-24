@@ -1,0 +1,53 @@
+/* ==========================================================================
+   typo.css v3.0.0 — Dark Theme
+   通过 prefers-color-scheme 自动切换 或 .typo-dark class 手动激活
+   使用 :where() 降低优先级，允许用户自定义覆盖
+   ========================================================================== */
+
+/* 暗色变量定义（作为 mixin，避免重复声明） */
+/* 自动跟随系统（用户未手动指定时） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-typo-theme="light"]):not([data-typo-theme="sepia"]) {
+    --typo-color-text:         #e0e0e0;
+    --typo-color-text-strong:  #fff;
+    --typo-color-text-muted:   #999;
+    --typo-color-text-quiet:   #888;
+    --typo-color-bg:           #1a1a2e;
+    --typo-color-bg-code:      #16213e;
+    --typo-color-bg-table-head:#1f2b3d;
+    --typo-color-bg-table-thead:#253548;
+    --typo-color-bg-mark:      #3d3520;
+    --typo-color-border:       #2a3a4a;
+    --typo-color-border-light: #253040;
+    --typo-color-border-mark:  #5a4a20;
+    --typo-color-accent:       #4ecca3;
+    --typo-color-accent-hover: #80e0c0;
+    --typo-shadow-sm:          0 1px 2px rgb(255 255 255 / 20%);
+    --typo-shadow-md:          0 2px 4px rgb(255 255 255 / 30%);
+
+    color-scheme: dark;
+  }
+}
+
+/* 手动强制暗色（覆盖系统偏好） */
+.typo-dark,
+[data-typo-theme="dark"] {
+  --typo-color-text:         #e0e0e0;
+  --typo-color-text-strong:  #fff;
+  --typo-color-text-muted:   #999;
+  --typo-color-text-quiet:   #888;
+  --typo-color-bg:           #1a1a2e;
+  --typo-color-bg-code:      #16213e;
+  --typo-color-bg-table-head:#1f2b3d;
+  --typo-color-bg-table-thead:#253548;
+  --typo-color-bg-mark:      #3d3520;
+  --typo-color-border:       #2a3a4a;
+  --typo-color-border-light: #253040;
+  --typo-color-border-mark:  #5a4a20;
+  --typo-color-accent:       #4ecca3;
+  --typo-color-accent-hover: #80e0c0;
+  --typo-shadow-sm:          0 1px 2px rgb(0 0 0 / 25%);
+  --typo-shadow-md:          0 2px 4px rgb(0 0 0 / 35%);
+
+  color-scheme: dark;
+}
