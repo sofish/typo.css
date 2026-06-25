@@ -47,6 +47,12 @@ The serif helper now uses Song-style CJK families first and generic `ui-serif`/`
 
 `.typo-serif`, `.typo-kai`, and `.typo-fangsong` provide explicit helpers for the four common Chinese type styles without making the body font unpredictable.
 
+## Vertical Layout Guidance
+
+`.typo-vertical` is a low-level writing-mode helper, not a complete poem-card layout. A polished vertical Chinese composition still needs page-level spacing: a fixed or responsive column width, enough padding before and after each column, visible or implied column boundaries, and horizontal scrolling when the available viewport is too narrow.
+
+The demo page follows the same direction as the PageZero poem card: a right-to-left flex grid, one vertical text column per poetic phrase, generous top/bottom padding, and a separate title column. This keeps vertical text from collapsing into a cramped single strip while preserving the CSS-only nature of Typo.css.
+
 ## Comparable Library Lessons
 
 - Han.css and Kanji Typesetting confirm that full Han typography needs semantic normalization, Han-Western spacing, punctuation compression, hanging punctuation, ruby, emphasis marks, and four Chinese type styles. Typo.css adopts CSS-native pieces and avoids a mandatory JavaScript rendering pipeline.

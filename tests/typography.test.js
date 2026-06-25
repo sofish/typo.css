@@ -103,4 +103,7 @@ assertIncludes(html, '<link rel="canonical" href="https://typo.built4.fun/">', "
 assertIncludes(html, '"@type": "SoftwareSourceCode"', "Demo page should include SoftwareSourceCode JSON-LD");
 assertIncludes(html, 'class="typo typo-selection typo-readable typo-readable-center"', "Demo page should exercise readable measure helpers");
 assertIncludes(html, 'class="typo-zhuyin" lang="zh-TW"', "Demo page should exercise Zhuyin ruby helper");
-assertIncludes(html, 'class="typo-vertical typo-readable"', "Demo page should exercise vertical Chinese helper");
+assertIncludes(html, 'class="vertical-poem-demo"', "Demo page should use a page-like vertical poem demo");
+assertIncludes(html, 'class="vertical-poem-grid"', "Vertical demo should use separated right-to-left columns");
+assertIncludes(html, "双调·沉醉东风·夏景", "Vertical demo should include the PageZero-inspired poem title");
+assert(!html.includes("docs/library-evolution-plan.md"), "Demo page should not show maintenance research-link copy");

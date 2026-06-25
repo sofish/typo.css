@@ -38,11 +38,86 @@
     #table{ margin-bottom:2em; color:#888; }
     #github{ position:absolute;top:1em;}
     #github iframe{ display:inline;margin-right:1em; }
+    .vertical-poem-demo{
+      --vertical-demo-border:#b24a61;
+      --vertical-demo-divider:rgba(178,74,97,.72);
+      --vertical-demo-paper:#fbf8f0;
+      --vertical-demo-col:clamp(56px,8vw,82px);
+      box-sizing:border-box;
+      position:relative;
+      margin:1.8em 0 1.2em;
+      padding:clamp(28px,5vw,48px) clamp(36px,7vw,72px);
+      overflow-x:auto;
+      overflow-y:hidden;
+      background:radial-gradient(120% 120% at 50% 18%,rgba(255,255,255,.94) 0%,var(--vertical-demo-paper) 64%,#f3ede2 100%);
+      border:3px solid var(--vertical-demo-border);
+      color:#1f1f1f;
+    }
+    .vertical-poem-demo::-webkit-scrollbar{ display:none; }
+    .vertical-poem-grid{
+      display:flex;
+      flex-direction:row-reverse;
+      align-items:stretch;
+      justify-content:center;
+      min-width:max-content;
+      min-height:20em;
+    }
+    .vertical-poem-title,
+    .vertical-poem-col{
+      box-sizing:border-box;
+      flex:0 0 var(--vertical-demo-col);
+      writing-mode:vertical-rl;
+      text-orientation:upright;
+      margin:0;
+      padding:clamp(18px,4vw,34px) 0;
+      line-height:var(--vertical-demo-col);
+      letter-spacing:.08em;
+      text-align:start;
+    }
+    .vertical-poem-title{
+      flex-basis:calc(var(--vertical-demo-col) * 1.3);
+      padding-inline-start:clamp(10px,2vw,18px);
+      font-family:var(--typo-font-kai);
+      font-size:clamp(1.55em,4vw,2.2em);
+      letter-spacing:.12em;
+    }
+    .vertical-poem-title small{
+      margin-block-start:1.2em;
+      font-size:.42em;
+      font-family:var(--typo-font-serif);
+      letter-spacing:.18em;
+      color:#666;
+    }
+    .vertical-poem-col{
+      border-left:1px solid var(--vertical-demo-divider);
+      font-family:var(--typo-font-kai);
+      font-size:clamp(1.35em,3.4vw,1.9em);
+    }
+    .vertical-poem-col.first{
+      border-right:1px solid var(--vertical-demo-divider);
+    }
 
     @media only screen and (max-width: 640px) {
       table{ word-break:break-all;word-wrap:break-word;font-size:12px; }
       .typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption {
         padding: 0.5em;
+      }
+      .vertical-poem-demo{
+        --vertical-demo-col:42px;
+        margin-left:-4vw;
+        margin-right:-4vw;
+        padding:20px 14px;
+      }
+      .vertical-poem-grid{
+        min-width:auto;
+        justify-content:center;
+      }
+      .vertical-poem-title{
+        flex-basis:56px;
+        font-size:1.35em;
+      }
+      .vertical-poem-col{
+        font-size:1.14em;
       }
     }
   </style>
@@ -450,9 +525,14 @@ h5,h6{font-size:1em;}
   <ruby>旧<rt>jiù</rt>金<rt>jīn</rt>山<rt>shān</rt></ruby>。
 </p>
 
-<p class="typo-vertical typo-readable">直排示例：山川异域，风月同天。中文排版需要同时尊重传统阅读习惯与现代屏幕约束。</p>
-
-<p>Research、同类库调研与库级升级计划见 <a href="https://github.com/sofish/typo.css/blob/master/docs/library-evolution-plan.md">docs/library-evolution-plan.md</a>。</p>
+<section class="vertical-poem-demo" aria-label="直排诗词示例">
+  <div class="vertical-poem-grid">
+    <h6 class="vertical-poem-title">双调·沉醉东风·夏景<small>白朴（元）</small></h6>
+    <p class="vertical-poem-col first">携手藕花湖上路，一霎黄梅雨。</p>
+    <p class="vertical-poem-col">罗扇摇，凉风透。</p>
+    <p class="vertical-poem-col">向人道：今夜凉如许。</p>
+  </div>
+</section>
 
 <h5 id="appendix3">3、开源许可</h5>
 

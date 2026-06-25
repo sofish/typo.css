@@ -50,7 +50,7 @@ Typo.css 现在把现代中文排版分成默认增强和显式 helper：默认 
 (8) 高级中文排版 helper：`.typo-justify`、`.typo-vertical`、`.typo-zhuyin` <br />
 (9) 创建 border-box：在 html 中添加 `.borderbox` [#why](https://www.paulirish.com/2012/box-sizing-border-box-ftw/)
 
-更多现代中文网页排版依据见 [`docs/modern-chinese-typography.md`](docs/modern-chinese-typography.md)，Research、同类库调研与库级升级计划见 [`docs/library-evolution-plan.md`](docs/library-evolution-plan.md)。
+更多现代中文网页排版依据见 [`docs/modern-chinese-typography.md`](docs/modern-chinese-typography.md)，维护计划见 [`docs/library-evolution-plan.md`](docs/library-evolution-plan.md)。
 
 ### 三、测试
 
