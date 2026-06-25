@@ -6,7 +6,32 @@ html {
   background: #fff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-rendering: optimizelegibility;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  --typo-font-sans-hans: "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --typo-font-sans-hant: "PingFang TC", "PingFang HK", "Noto Sans CJK TC", "Noto Sans CJK HK", "Noto Sans TC", "Source Han Sans TC", "Microsoft JhengHei UI", "Microsoft JhengHei", "Heiti TC", "LiHei Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --typo-font-sans: var(--typo-font-sans-hans);
+  --typo-font-serif-hans: "Songti SC", "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", SimSun, STSong, "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  --typo-font-serif-hant: "Songti TC", "Noto Serif CJK TC", "Noto Serif TC", "Source Han Serif TC", PMingLiU, MingLiU, "LiSong Pro", "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  --typo-font-serif: var(--typo-font-serif-hans);
+  --typo-font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
+  --typo-font-kai: "Kaiti SC", "Kaiti TC", KaiTi, "楷体", STKaiti, "BiauKai", DFKai-SB, cursive;
+  --typo-font-fangsong: FangSong, "仿宋", STFangsong, serif;
+  --typo-color-text: #24292f;
+}
+
+@supports (font-family: generic(kai)) {
+  :root {
+    --typo-font-kai: "Kaiti SC", "Kaiti TC", KaiTi, "楷体", STKaiti, "BiauKai", DFKai-SB, generic(kai), cursive;
+  }
+}
+
+@supports (font-family: generic(fangsong)) {
+  :root {
+    --typo-font-fangsong: FangSong, "仿宋", STFangsong, generic(fangsong), serif;
+  }
 }
 
 /* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
@@ -34,7 +59,19 @@ audio, canvas, video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
-  font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font: 400 1em/1.75 "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--typo-font-sans);
+  font-kerning: normal;
+  font-optical-sizing: auto;
+}
+
+body:lang(zh-Hant),
+body:lang(zh-HK),
+body:lang(zh-MO),
+body:lang(zh-TW) {
+  --typo-font-sans: var(--typo-font-sans-hant);
+  --typo-font-serif: var(--typo-font-serif-hant);
+  font-family: var(--typo-font-sans);
 }
 
 button::-moz-focus-inner,
@@ -72,9 +109,10 @@ blockquote {
 
 /* Firefox 以外，元素没有下划线，需添加 */
 acronym, abbr {
-  border-bottom: 1px dotted;
+  border-bottom: 0;
   font-variant: normal;
-  text-decoration: none;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.14em;
 }
 
 /* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
@@ -106,6 +144,14 @@ q:before, q:after {
   content: '';
 }
 
+:lang(zh), :lang(zh-Hans) {
+  quotes: "“" "”" "‘" "’";
+}
+
+:lang(zh-Hant), :lang(zh-HK), :lang(zh-MO), :lang(zh-TW) {
+  quotes: "「" "」" "『" "』";
+}
+
 /* 统一上标和下标 */
 sub, sup {
   font-size: 75%;
@@ -135,13 +181,16 @@ a:hover {
 }
 
 .typo a {
-  border-bottom: 1px solid #1abc9c;
+  border-bottom: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+  text-decoration-skip-ink: auto;
 }
 
 .typo a:hover {
-  border-bottom-color: #555;
   color: #555;
-  text-decoration: none;
+  text-decoration-color: #555;
 }
 
 /* 默认不显示下划线，保持页面简洁 */
@@ -151,12 +200,16 @@ ins, a {
 
 /* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
  * 要做到更好，向后兼容的话，添加 class="typo-u" 来显示专名号
- * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
- * 被放弃的是 4，之前一直搞错 http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
- * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/
+ * 关于 <u> 标签：https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element
+ * 被放弃的是 4，之前一直搞错 https://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
+ * 一篇关于 <u> 标签的很好文章：https://html5doctor.com/u-element/
  */
 u, .typo-u {
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.12em;
+  text-underline-position: under;
+  text-decoration-skip-ink: auto;
 }
 
 /* 标记，类似于手写的荧光笔的作用 */
@@ -169,7 +222,8 @@ mark {
 
 /* 代码片断 */
 pre, code, pre tt {
-  font-family: Courier, 'Courier New', monospace;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, "Courier New", monospace;
+  font-family: var(--typo-font-mono);
 }
 
 pre {
@@ -178,6 +232,12 @@ pre {
   padding: 1em 1.5em;
   display: block;
   -webkit-overflow-scrolling: touch;
+}
+
+pre, code, kbd, samp {
+  line-break: auto;
+  text-autospace: no-autospace;
+  text-spacing-trim: space-all;
 }
 
 /* 一致化 horizontal rule */
@@ -230,8 +290,17 @@ strong, b {
 }
 
 /* 提供 serif 版本的字体设置: iOS 下中文自动 fallback 到 sans-serif */
-.serif {
-  font-family: Palatino, Optima, Georgia, serif;
+.serif, .typo-serif {
+  font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", SimSun, STSong, "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  font-family: var(--typo-font-serif);
+}
+
+.kai, .typo-kai {
+  font-family: var(--typo-font-kai);
+}
+
+.fangsong, .typo-fangsong {
+  font-family: var(--typo-font-fangsong);
 }
 
 /* 保证块/段落之间的空白隔行 */
@@ -241,10 +310,12 @@ strong, b {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-  font-weight: 100;
+  font-family: "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--typo-font-sans);
+  font-weight: 600;
   color: #000;
   line-height: 1.35;
+  letter-spacing: 0;
 }
 
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
@@ -253,6 +324,92 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.2em;
   margin-bottom: 0.6em;
   line-height: 1.35;
+  text-wrap: balance;
+}
+
+.typo {
+  color: #24292f;
+  color: var(--typo-color-text);
+  font-family: var(--typo-font-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hanging-punctuation: allow-end;
+  text-autospace: ideograph-alpha ideograph-numeric;
+  text-spacing-trim: normal;
+  text-emphasis-position: under right;
+}
+
+.typo:lang(zh-Hant),
+.typo:lang(zh-HK),
+.typo:lang(zh-MO),
+.typo:lang(zh-TW),
+:lang(zh-Hant) .typo,
+:lang(zh-HK) .typo,
+:lang(zh-MO) .typo,
+:lang(zh-TW) .typo {
+  --typo-font-sans: var(--typo-font-sans-hant);
+  --typo-font-serif: var(--typo-font-serif-hant);
+  font-family: var(--typo-font-sans);
+}
+
+.typo q:before {
+  content: open-quote;
+}
+
+.typo q:after {
+  content: close-quote;
+}
+
+@supports (text-wrap: pretty) {
+  .typo p, .typo li, .typo blockquote {
+    text-wrap: pretty;
+  }
+}
+
+.typo-readable {
+  max-width: 48em;
+}
+
+.typo-readable-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typo-justify {
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.typo-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 1.8;
+}
+
+.typo-vertical.typo-readable {
+  max-width: none;
+  max-height: 40em;
+}
+
+.typo ruby {
+  ruby-position: over;
+  ruby-align: center;
+}
+
+.typo rt {
+  font-size: 0.5em;
+  line-height: 1;
+  text-autospace: no-autospace;
+}
+
+.typo ruby:lang(zh-TW),
+.typo ruby:lang(zh-Hant-TW),
+.typo ruby.typo-zhuyin,
+.typo-zhuyin ruby {
+  ruby-position: inter-character;
 }
 
 .typo h1, .typo-h1 {
@@ -338,6 +495,20 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   white-space: nowrap;
   content: "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・";
+}
+
+@supports (text-emphasis: filled dot) or (-webkit-text-emphasis: filled dot) {
+  .typo-em {
+    position: static;
+    -webkit-text-emphasis: filled dot;
+    -webkit-text-emphasis-position: under right;
+    text-emphasis: filled dot;
+    text-emphasis-position: under right;
+  }
+
+  .typo-em:after {
+    content: none;
+  }
 }
 
 /* Responsive images */

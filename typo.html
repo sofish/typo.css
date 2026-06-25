@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8"/>
-  <meta name="description" content="Typo.css 的目的是，在一致化浏览器排版效果的同时，构建最适合中文阅读的网页排版。作者：sofish Lin，基于 MIT License 协议开源。"/>
-  <meta name="viewport" content="width=device-width, minimal-ui">
+  <meta name="description" content="Typo.css 是面向现代中文阅读的网页排版样式表，统一浏览器默认样式，并优化字体、行高、中西文间距、标点与着重号。"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://typo.built4.fun/">
+  <meta property="og:title" content="Typo.css - 中文网页重设与排版">
+  <meta property="og:description" content="面向现代中文阅读的 CSS：字体、行高、CJK 断行、中西文间距、标点与语义排版。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://typo.built4.fun/">
   <link rel="stylesheet" href="./typo.css"/>
   <title>Typo.css - 中文网页重设与排版</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Typo.css",
+    "description": "面向现代中文阅读的网页排版 CSS，优化字体、行高、中西文间距、标点与语义排版。",
+    "codeRepository": "https://github.com/sofish/typo.css",
+    "programmingLanguage": "CSS",
+    "license": "https://typo.built4.fun/license.txt"
+  }
+  </script>
   <style>
     code{ color:#1abc9c; }
     html{ background:#eee; }
@@ -18,7 +35,6 @@
 
     #wrapper{ padding:5% 10%; position:relative;}
     #tagline{ color:#999; font-size:1em; margin:-2em 0 2em; padding-bottom:2em; border-bottom:3px double #eee; }
-    #fork{ position:fixed; top:0; right:0; _position:absolute; }
     #table{ margin-bottom:2em; color:#888; }
     #github{ position:absolute;top:1em;}
     #github iframe{ display:inline;margin-right:1em; }
@@ -28,20 +44,19 @@
       .typo table th, .typo table td, .typo-table th, .typo-table td .typo table caption {
         padding: 0.5em;
       }
-      #fork{ display:none; }
     }
   </style>
 </head>
 <body>
 
 <div id="github">
-  <iframe src="//ghbtns.com/github-btn.html?user=sofish&repo=typo.css&type=watch&count=true"
+  <iframe src="https://ghbtns.com/github-btn.html?user=sofish&repo=typo.css&type=watch&count=true"
           allowtransparency="true" frameborder="0" scrolling="0" width="98" height="20"></iframe>
-  <iframe src="//ghbtns.com/github-btn.html?user=sofish&type=follow&count=true"
+  <iframe src="https://ghbtns.com/github-btn.html?user=sofish&type=follow&count=true"
           allowtransparency="true" frameborder="0" scrolling="0" width="156" height="20"></iframe>
 </div>
 
-<div id="wrapper" class="typo typo-selection">
+<div id="wrapper" class="typo typo-selection typo-readable typo-readable-center">
 
 <h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
 
@@ -58,7 +73,8 @@
   <li><a href="#section3">附录</a>
     <ul>
       <li><a href="#appendix1"><i class="serif">Typo.css</i> 排版偏重点</a></li>
-      <li><a href="#appendix2">开源许可</a></li>
+      <li><a href="#appendix2">现代中文排版升级</a></li>
+      <li><a href="#appendix3">开源许可</a></li>
     </ul>
   </li>
 </ol>
@@ -137,7 +153,7 @@
 <h4>中文排版的重点和难点</h4>
 
 <p>在中文排版中，HTML4 的很多标准在语义在都有照顾到。但从视觉效果上，却很难利用单独的 CSS 来实现，像<abbr title="在文字下多加一个点">着重号</abbr>（例：这里<em class="typo-em">强调一下</em>）。在 HTML4 中，专名号标签（<code>&lt;u&gt;</code>）已经被放弃，而
-  HTML5 被<a href="//html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i> 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
+  HTML5 被<a href="https://html5doctor.com/u-element/">重新提起</a>。<i class="serif">Typo.css</i> 也根据实际情况提供相应的方案。我们重要要注意的两点是：</p>
 <ol>
   <li>语义：语义对应的用法和样式是否与中文排版一致</li>
   <li>表现：在各浏览器中的字体、大小和缩放是否如排版预期</li>
@@ -416,15 +432,32 @@ h5,h6{font-size:1em;}
   </tbody>
 </table>
 
-<h5 id="appendix2">2、开源许可</h5>
+<h5 id="appendix2">2、现代中文排版升级</h5>
 
-<p><i class="serif">Typo.css</i> 基于 <a href="//zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
-  href="//typo.sofi.sh/license.txt">license.txt</a> 即可。</p>
+<p><i class="serif">Typo.css</i> 现在把中文阅读质量作为库级目标，而不是只做浏览器重设。默认的 <code>.typo</code> 保持横排正文友好，并渐进启用现代浏览器已支持的 CJK 断行、中西文自动间距、标点处理、原生着重号和更好的换行策略。</p>
+
+<ul>
+  <li><code>.typo-readable</code> 控制中文正文行长，<code>.typo-readable-center</code> 负责居中。</li>
+  <li><code>.typo-justify</code> 用于需要两端对齐的长文排版。</li>
+  <li><code>.typo-vertical</code> 用于直排场景。</li>
+  <li><code>.typo-serif</code>、<code>.typo-kai</code>、<code>.typo-fangsong</code> 对应宋、楷、仿宋等中文字体风格。</li>
+  <li><code>lang="zh-Hant"</code>、<code>zh-TW</code>、<code>zh-HK</code> 或 <code>zh-MO</code> 会启用繁体中文字体回退。</li>
+</ul>
+
+<p>Ruby 示例：
+  <ruby class="typo-zhuyin" lang="zh-TW">電<rt>ㄉㄧㄢˋ</rt>腦<rt>ㄋㄠˇ</rt></ruby>
+  与拼音示例：
+  <ruby>旧<rt>jiù</rt>金<rt>jīn</rt>山<rt>shān</rt></ruby>。
+</p>
+
+<p class="typo-vertical typo-readable">直排示例：山川异域，风月同天。中文排版需要同时尊重传统阅读习惯与现代屏幕约束。</p>
+
+<p>Research、同类库调研与库级升级计划见 <a href="https://github.com/sofish/typo.css/blob/master/docs/library-evolution-plan.md">docs/library-evolution-plan.md</a>。</p>
+
+<h5 id="appendix3">3、开源许可</h5>
+
+<p><i class="serif">Typo.css</i> 基于 <a href="https://zh.wikipedia.org/wiki/MIT_License">MIT License</a> 开源，使用代码只需说明来源，或者引用 <a
+  href="https://typo.built4.fun/license.txt">license.txt</a> 即可。</p>
 </div>
-<!-- #wrapper -->
-<a href="https://github.com/sofish/Typo.css" id="fork">
-  <img alt="Fork me on GitHub" src="//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-</a>
-
 </body>
 </html>
